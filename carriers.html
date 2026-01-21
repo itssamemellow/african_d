@@ -64,83 +64,63 @@
       </header>
 
       <section class="noir-landing" id="landing">
-        <h1>Our Wines</h1>
+        <h1>Premium Leather Carriers</h1>
         <p>
-          At The African Diamond, we craft wines that capture the essence of
-          South Africa's diverse terroirs, expertly blending tradition with
-          innovation. Whether you're enjoying a vibrant celebration or a quiet
-          evening, our wines transform moments into memories.
+          At The African Diamond, luxury extends beyond the bottle. Introducing our 
+          exclusive handcrafted leather wine carriers, designed for those who appreciate 
+          both sophistication and functionality. Made from premium full-grain leather, 
+          these carriers offer the perfect blend of style and durability—ensuring your 
+          wine is transported with elegance.
         </p>
       </section>
 
-      <!-- Wine section -->
       <section class="wine-shop" id="shop">
-        <!-- Grenache Blanc Section -->
         <section class="wine-card">
-          <h2>Grenache Blanc</h2>
+          <h2>Wine Leather Carriers</h2>
           <span>
-            <div id="image">
-              <img src="images/assets/balnc_bottle.png" alt="Grenache Blanc" />
+            <div id="image" class="wine-item">
+                <div class="container">
+                    <img src="images/assets/product/carrier-product-1.webp" alt="Wine Leather Carriers" />
+                </div>
+              <span>
+                <img src="images/assets/product/carrier-product-1.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-2.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-3.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-4.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-5.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-6.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-7.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-8.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-9.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-10.webp" alt="Wine Leather Carriers">
+                <img src="images/assets/product/carrier-product-11.webp" alt="Wine Leather Carriers">
+              </span>
             </div>
-            <div class="wine-item">
+            <div class="wine-item" id="leather">
+                <h3 id="title">Craftsmanship & Design</h3>
               <p>
-                <strong>Description:</strong> </br>Fermented with wild yeasts in
-                300-liter French oak barrels, our Grenache Blanc develops rich
-                and complex characters. This handcrafted wine embodies minimal
-                intervention and offers a delightful experience with every sip.
+                Each carrier is meticulously crafted with high-quality leather, featuring 
+                reinforced stitching and a structured silhouette. The soft suede interior 
+                protects your bottle, while the secure handle and refined closure add a 
+                touch of finesse. Whether it's for personal use or as a luxurious gift, our 
+                carriers are the ultimate statement of exclusivity.
               </p>
-              <ul class="wine-details">
-                <li>
-                  <strong>Tasting Notes:</strong>
-                  <p>
-                    White stone fruit, hints of
-                    citrus, jasmine, and a touch of minerality. The French oak
-                    imparts subtle vanilla and spice notes.
-                  </p> 
-                </li>
-                <li>
-                  <strong>Origin:</strong>
-                  <p>Swartland, South Africa</p>
-                </li>
-                <li>
-                  <strong>Vineyard:</strong>
-                  <p>
-                    Low yield, bush-vine Grenache Blanc
-                    on well-drained sandy soil.
-                  </p>
-                </li>
-                <li>
-                  <strong>Wine-making:</strong>
-                  <p>
-                    Wild fermented in French oak
-                    barrels, aged for 8 months on fine lees for texture and depth.
-                  </p>
-                </li>
-                <li>
-                  <strong>Serve & Aging:</strong>
-                  <p> 
-                    Best served at 10 to 12°C. It 
-                    will continue to evolve over the next 2 years.
-                  </p>
-                </li>
-              </ul>
               <h3>Price:</h3>
               <ul class="price">
-                <li><p>Single Bottle: </p><span></span><em>R 210.00</em></li>
-                <li><p>Case (6 Bottles): </p><span></span><em>R 1080.00</em></li>
-                <li><p>Wine Duo (Blanc + Noir): </p><span></span><em>R 370.00</em></li>
-                <!-- <li><p>Current Status:</p><span></span><em id="stockstatus">Sold Out</em></li> -->
+                <li><p>Single Leather Carrier: </p><span></span><em>R650.00</em></li>
+                <li><p>Double Leather Carrier: </p><span></span><em>R1195.00</em></li>
               </ul>
-              <h4>Pairing Suggestions:</h4>
-              <p>
-                Enjoy this wine with light seafood dishes, creamy cheeses, or
-                chicken with a citrus glaze.
-              </p>
+              <h3>Wine & Carrier Combo:</h3>
+              <ul class="price">
+                <li><p>Single Carrier + Any One Bottle: </p><span></span><em>R850.00</em></li>
+                <li><p>Double Carrier + The African Diamond Duo (Blanc + Noir): </p><span></span><em>R1499.00</em></li>
+              </ul>
 
               <span id="btn">
                 <button id="openOrderModal" class="order-button">Place Order</button>
-                <a target="_blank" href="images/assets/AFRICAN_DIAMOND_Technical_Sheet_Grenache_Blanc_2023.pdf" download="African Diamond - Grenache Blanc Tasting Notes"><button>Download Full Tasting Notes</button></a>
               </span>
+
+              <span class="images"></span>
             </div>
           </span>
         </section>
@@ -164,30 +144,20 @@
               <!-- PayFast Payment Details -->
               <input type="hidden" id="pfAmount" name="amount" value="100.00">
               <input type="hidden" id="pfItemName" name="item_name" value="Order from The African Diamond">
-
               <div>
-              <h4 class="blanc">Grenache Blanc</h4>
-              <!-- Bottle Quantity -->
-              <span id="quantity"><label for="blancbottleQty">Single Bottle (R210.00 each)</label>
-              <input type="number" id="blancbottleQty" name="blancbottleQty" min="0" value="0"></span>
-
-              <!-- Case Quantity -->
-              <span id="quantity"><label for="blancCaseQty">Case of 6 Bottles (R1080.00)</label>
-              <input type="number" id="blancCaseQty" name="blancCaseQty" min="0" value="0"></span>
-
-              <h4 class="noir">Grenache Noir</h4>
-              <!-- Bottle Quantity -->
-              <span id="quantity"><label for="noirBottleQty">Single Bottle (R235.00 each)</label>
-              <input type="number" id="noirBottleQty" name="noirBottleQty" min="0" value="0"></span>
-
-              <!-- Case Quantity -->
-              <span id="quantity"><label for="noirCaseQty">Case of 6 Bottles (R1110.00)</label>
-              <input type="number" id="noirCaseQty" name="noirCaseQty" min="0" value="0"></span>
-
-              <h4 class="duo">Special Offers</h4>
-              <!-- Duo Quantity -->
-              <span id="quantity"><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)</label>
-              <input type="number" id="duoQty" name="duoQty" min="0" value="0"></span>
+                <h4 class="carriers">Leather Carriers</h4>
+                <label for="singleCarrierQty">Single Leather Carrier (R650.00)</label>
+                <input type="number" id="singleCarrierQty" name="singleCarrierQty" min="0" value="0">
+    
+                <label for="doubleCarrierQty">Double Leather Carrier (R1195.00)</label>
+                <input type="number" id="doubleCarrierQty" name="doubleCarrierQty" min="0" value="0">
+    
+                <h4 class="combo">Wine & Carrier Combo</h4>
+                <label for="singleComboQty">Any 1 Bottle + Single Carrier (R850.00)</label>
+                <input type="number" id="singleComboQty" name="singleComboQty" min="0" value="0">
+    
+                <label for="doubleComboQty">Duo + Double Carrier (R1499.00)</label>
+                <input type="number" id="doubleComboQty" name="doubleComboQty" min="0" value="0">
               </div>
 
               <!-- Name -->
@@ -217,7 +187,6 @@
               <!-- Total Amount -->
               <span id="payment" class="total"><label for="totalAmount">Total Amount</label>
               <p id="totalAmount">R0.00</p></span>
-
               <button type="submit" class="submitBtn">Submit Order</button>
             </form>
           </div>
@@ -237,7 +206,8 @@
             <p id="rating-value">No rating yet</p>
           </section>
     
-          <!-- Key Metrics <section class="key-metrics">
+          <!-- Key Metrics 
+           <section class="key-metrics">
             <h3>Product Ratings</h3>
             <div class="metric">
               <p>Quality of Product:</p>
@@ -294,7 +264,7 @@
               <input type="text" id="reviewTitle" name="reviewTitle" placeholder="Example: Grenache Noir Taste" required>
   
               <label for="email">Your Email<em>*</em></label>
-              <input type="email" id="r.email" name="email" required>
+              <input type="email" id="r.email" name="email" required> 
   
               <button type="submit" class="submitBtn">Submit Review</button>
             </form>
@@ -302,14 +272,23 @@
           </div>
         </div>
 
-        <section class="shop-card" id="shop-card">
+        <section class="products" id="shop-card">
           <h2>Related Products</h2>
-          <div class="noir">
-            <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
-            <h3>Grenache Noir</h3>
-            <span>
-              <a href="shop-noir">View Details</a>
-            </span>
+          <div class="products">
+            <div class="balnc">
+              <img src="images/assets/balnc_bottle.png" alt="Genache Blanc" />
+              <h3>Grenache Blanc</h3>
+              <span>
+                <a href="shop-blanc">View Details</a>
+              </span>
+            </div>
+            <div class="noir">
+              <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
+              <h3>Grenache Noir</h3>
+              <span>
+                <a href="shop-noir">View Details</a>
+              </span>
+            </div>
           </div>
         </section>
       </section>
@@ -338,7 +317,7 @@
           </li>
         </ul>
       </section> -->
-      
+
       <!-- Age Verification Modal -->
       <div id="age-check-modal" class="modal">
         <div class="modal-content">
@@ -370,6 +349,16 @@
     <script src="script.js"></script>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const mainImage = document.querySelector("#image .container img");
+        const thumbnails = document.querySelectorAll("#image span img");
+
+        thumbnails.forEach((thumbnail) => {
+            thumbnail.addEventListener("click", function () {
+                mainImage.src = this.src;
+            });
+        });
+    });
       const stars = document.querySelectorAll('.star');
       const ratingValue = document.getElementById('rating-value');
 
@@ -479,23 +468,20 @@
       const closeOrderModal = document.getElementById('closeOrderModal');
       const orderForm = document.getElementById('orderForm');
 
-      const bottlePrice = 235;
-      const casePrice = 1110;
+      const singleCarrierPrice = 650;
+      const doubleCarrierPrice = 1195;
 
-      const blancBottlePrice = 210;
-      const blancCasePrice = 1080;
-
-      const duoPrice = 370;
+      const singleComboPrice = 850;
+      const doubleComboPrice = 1499;
 
       // Rates
       const localRate = 60;
       const domesticStandardRate = 80;
 
-      const noirBottleQtyInput = document.getElementById('noirBottleQty');
-      const noirCaseQtyInput = document.getElementById('noirCaseQty');
-      const blancbottleQtyInput = document.getElementById('blancbottleQty');
-      const blancCaseQtyInput = document.getElementById('blancCaseQty');
-      const duoQtyInput = document.getElementById('duoQty');
+      const singleCarrierQtyInput = document.getElementById('singleCarrierQty');
+      const doubleCarrierQtyInput = document.getElementById('doubleCarrierQty');
+      const singleComboQtyInput = document.getElementById('singleComboQty');
+      const doubleComboQtyInput = document.getElementById('doubleComboQty');
       const totalAmountElement = document.getElementById('totalAmount');
       const shippingFeeElement = document.getElementById('shippingFee');
       const addressInput = document.getElementById('address');
@@ -516,16 +502,15 @@
 
       // Function to calculate total order amount
       function calculateTotal() {
-        const noirBottleQty = parseInt(noirBottleQtyInput.value) || 0;
-        const noirCaseQty = parseInt(noirCaseQtyInput.value) || 0;
-        const blancbottleQty = parseInt(blancbottleQtyInput.value) || 0;
-        const blancCaseQty = parseInt(blancCaseQtyInput.value) || 0;
-        const duoQty = parseInt(duoQtyInput.value) || 0;
+        const singleCarrierQty = parseInt(singleCarrierQtyInput.value) || 0;
+        const doubleCarrierQty = parseInt(doubleCarrierQtyInput.value) || 0;
+        const singleComboQty = parseInt(singleComboQtyInput.value) || 0;
+        const doubleComboQty = parseInt(doubleComboQtyInput.value) || 0;
 
         const shipping = calculateShippingFee();
         shippingFeeElement.textContent = `R${shipping.fee.toFixed(2)} (${shipping.label})`;
 
-        const totalAmount = (blancbottleQty * blancBottlePrice) + (blancCaseQty * blancCasePrice) + (noirBottleQty * bottlePrice) + (noirCaseQty * casePrice) + (duoQty * duoPrice) + shipping.fee;
+        const totalAmount = (singleComboQty * singleComboPrice) + (doubleComboQty * doubleCarrierPrice) + (singleCarrierQty * singleCarrierPrice) + (doubleCarrierQty * doubleComboPrice) + shipping.fee;
         totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
 
         // Update PayFast form fields
@@ -533,20 +518,18 @@
 
         // Create an array of items with non-zero quantities
         const selectedItems = [
-          noirBottleQty > 0 ? `${noirBottleQty} Noir Bottles` : null,
-          noirCaseQty > 0 ? `${noirCaseQty} Noir Cases` : null,
-          blancbottleQty > 0 ? `${blancbottleQty} Blanc Bottles` : null,
-          blancCaseQty > 0 ? `${blancCaseQty} Blanc Cases` : null,
-          duoQty > 0 ? `${duoQty} Duos` : null,
+          singleCarrierQty > 0 ? `${singleCarrierQty} Single Carrier` : null,
+          doubleCarrierQty > 0 ? `${doubleCarrierQty} Double Carrier` : null,
+          singleComboQty > 0 ? `${singleComboQty} Single Combo Carrier` : null,
+          doubleComboQty > 0 ? `${doubleComboQty} Double Combo Carrier` : null,
         ].filter(item => item !== null); // Filter out null items
 
         // Join the selected items with commas and set it as the item name
         pfItemNameInput.value = selectedItems.join(', ');
       }
 
-
       // Update total amount and shipping fee when address or quantities change
-      [addressInput, noirBottleQtyInput, noirCaseQtyInput, blancbottleQtyInput, blancCaseQtyInput, duoQtyInput].forEach(input => {
+      [addressInput, singleCarrierQtyInput, doubleCarrierQtyInput, singleComboQtyInput, doubleComboQtyInput].forEach(input => {
         input.addEventListener('input', calculateTotal);
       });
 

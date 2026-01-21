@@ -3,8 +3,8 @@
 const header = document.querySelector("header");
 const logo = document.getElementById("logo");
 
-const fullLogo = "images/icons/main_logo.webp";
-const iconLogo = "images/icons/small_logo.webp";
+const fullLogo = "/images/icons/main_logo.webp";
+const iconLogo = "/images/icons/small_logo.webp";
 
 function checkScroll() {
   if (window.scrollY > 50) {

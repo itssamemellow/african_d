@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>African Diamond &mdash; Shop</title>
+    <title>The African Diamond &mdash; Shop</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://db.onlinewebfonts.com/c/f1cfb0d208038e21ad90267089ab2584?family=Felix+Titling+V2"
@@ -14,6 +14,7 @@
       href="images/icons/head_icon.webp"
       type="image/x-icon"
     />
+    <meta name="google-site-verification" content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8" />
   </head>
   <body>
     <main id="shop-details">
@@ -24,11 +25,12 @@
               ><img id="logo" src="images/icons/main_logo.webp" alt="Full Logo"
             /></a>
           </li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="wine.html">WINES</a></li>
-          <li><a href="events.html">EVENTS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li id="active"><a href="shop.html">Shop</a></li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="wine">WINES</a></li>
+          <li><a href="events">EVENTS</a></li>
+          <li><a href="contact">CONTACT</a></li>
+          <li id="active"><a href="shop">Shop</a></li>
+          <li><a href="press">Blog</a></li>
         </ul>
         <nav class="hamburger" id="hamburger">
           <div>
@@ -40,19 +42,22 @@
                   alt="Full Logo" /></a
             ></span>
             <span>
-              <a href="about.html">ABOUT</a>
+              <a href="about">ABOUT</a>
             </span>
             <span>
-              <a href="wine.html">WINES</a>
+              <a href="wine">WINES</a>
             </span>
             <span>
-              <a href="events.html">EVENTS</a>
+              <a href="events">EVENTS</a>
             </span>
             <span>
-              <a href="contact.html">CONTACT</a>
+              <a href="contact">CONTACT</a>
             </span>
             <span>
-              <a href="shop.html">Shop</a>
+              <a href="shop">Shop</a>
+            </span>
+            <span>
+              <a href="press">Blog</a>
             </span>
           </div>
         </nav>
@@ -118,11 +123,14 @@
                   </p>
                 </li>
               </ul>
+              <ul class="price">
+              </ul>
               <h3>Price:</h3>
               <ul class="price">
                 <li><p>Single Bottle: </p><span></span><em>R235.00</em></li>
                 <li><p>Case (6 Bottles): </p><span></span><em>R1110.00</em></li>
                 <li><p>Wine Duo (Blanc + Noir): </p><span></span><em>R370.00</em></li>
+                <!-- <li><p>Current Status:</p><span></span><em id="stockstatus">Sold Out</em></li> -->
               </ul>
               <h4>Pairing Suggestions:</h4>
               <p>
@@ -145,27 +153,53 @@
             <h2>Place Your Order</h2>
     
             <!-- Order Form -->
-            <form id="orderForm">
+            <form id="orderForm" action="https://www.payfast.co.za/eng/process" method="POST">
+              <!-- PayFast Required Fields -->
+              <input type="hidden" name="merchant_id" value="25233413">
+              <input type="hidden" name="merchant_key" value="4tvvj2efmay1d">
+              <input type="hidden" name="amount" value="100.00"> <!-- Amount in decimal format -->
+              <input type="hidden" name="item_name" value="Test Item">
+              <input type="hidden" name="return_url" value="https://theafricandiamond.co.za/payment-success">
+              <input type="hidden" name="cancel_url" value="https://theafricandiamond.co.za/payment-cancelled.html">
+
+              <!-- PayFast Payment Details -->
+              <input type="hidden" id="pfAmount" name="amount" value="100.00">
+              <input type="hidden" id="pfItemName" name="item_name" value="Order from The African Diamond">
               <div>
+                <h4 class="noir">Grenache Noir</h4>
               <!-- Bottle Quantity -->
-              <span id="quantity"><label for="bottleQty">Grenache Noir &mdash; Bottle (R235.00 each)<em>*</em></label>
-              <input type="number" id="bottleQty" name="bottleQty" min="0" value="0"></span>
+              <span id="quantity"><label for="noirBottleQty">Single Bottle (R235.00 each)</label>
+              <input type="number" id="noirBottleQty" name="noirBottleQty" min="0" value="0"></span>
 
               <!-- Case Quantity -->
-              <span id="quantity"><label for="caseQty">Grenache Noir &mdash; Case of 6 Bottles (R1110.00)<em>*</em></label>
-              <input type="number" id="caseQty" name="caseQty" min="0" value="0"></span>
+              <span id="quantity"><label for="noirCaseQty">Case of 6 Bottles (R1110.00)</label>
+              <input type="number" id="noirCaseQty" name="noirCaseQty" min="0" value="0"></span>
 
+              <h4 class="blanc">Grenache Blanc</h4>
+              <!-- Bottle Quantity -->
+              <span id="quantity"><label for="blancbottleQty">Single Bottle (R210.00 each)</label>
+              <input type="number" id="blancbottleQty" name="blancbottleQty" min="0" value="0"></span>
+
+              <!-- Case Quantity -->
+              <span id="quantity"><label for="blancCaseQty">Case of 6 Bottles (R1080.00)</label>
+              <input type="number" id="blancCaseQty" name="blancCaseQty" min="0" value="0"></span>
+
+              <h4 class="duo">Special Offers</h4>
               <!-- Duo Quantity -->
-              <span id="quantity"><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)<em>*</em></label>
+              <span id="quantity"><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)</label>
               <input type="number" id="duoQty" name="duoQty" min="0" value="0"></span>
               </div>
 
+              <!-- Name -->
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
               <!-- Delivery Address -->
-              <label for="address">Delivery Address<em>*</em></label>
+              <label for="address">Delivery Address</label>
               <textarea id="address" name="address" placeholder="Enter your delivery address..." required></textarea>
 
               <!-- Payment Method
-              <label for="payment">Payment Method<em>*</em></label>
+              <label for="payment">Payment Method</label>
               <select id="payment" name="payment" required>
                 <option value="card">Credit/Debit Card</option>
                 <option value="eft">EFT</option>
@@ -173,20 +207,17 @@
               </select> -->
 
               <!-- Email -->
-              <label for="email">Your Email<em>*</em></label>
+              <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
               <!-- Shipping Fee -->
-              <span id="payment"><label for="shipping">Shipping Fee<em>*</em></label>
-              <p id="shippingFee">R50.00 (Standard Rate)</p></span>
+              <span id="payment"><label for="shipping">Shipping Fee</label>
+              <p id="shippingFee">R0.00</p></span>
 
               <!-- Total Amount -->
               <span id="payment" class="total"><label for="totalAmount">Total Amount</label>
               <p id="totalAmount">R0.00</p></span>
-
               <button type="submit" class="submitBtn">Submit Order</button>
-      
-              <p class="required"><em>*</em> Required</p>
             </form>
           </div>
         </div>
@@ -263,7 +294,7 @@
               <input type="text" id="reviewTitle" name="reviewTitle" placeholder="Example: Grenache Noir Taste" required>
   
               <label for="email">Your Email<em>*</em></label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="r.email" name="email" required>
   
               <button type="submit" class="submitBtn">Submit Review</button>
             </form>
@@ -271,65 +302,66 @@
           </div>
         </div>
 
-        <!-- FAQ Section
-        <section class="faq">
-          <h2>FAQs</h2>
-          <ul>
-            <li>
-              <strong>How should I store this wine?</strong> Store in a cool,
-              dark place at a consistent temperature.
-            </li>
-            <li>
-              <strong>How long will this wine age?</strong> Both wines will
-              evolve in complexity for up to 2 years.
-            </li>
-            <li>
-              <strong>What is the best way to serve it?</strong> Serve Blanc at
-              10-12°C and Noir at 12-16°C.
-            </li>
-            <li>
-              <strong
-                >Where can I find The African Diamond in local stores?</strong
-              >
-              Use our store locator or contact us to find a stockist near you.
-            </li>
-          </ul>
-        </section> -->
-
-        <!-- Wine Club Section 
-        <section class="wine-club">
-          <h2>Wine Club</h2>
-          <p>
-            Become a member of The African Diamond Wine Club for exclusive
-            access to new releases, discounts, and early invitations to events.
-            Enjoy regular deliveries with our subscription box service.
-          </p>
-        </section> -->
-
-        <!-- Shipping Information 
-        <section class="shipping-info">
-          <h2>Shipping Information</h2>
-          <p>
-            We offer nationwide delivery and international shipping with options
-            for gift-wrapping and personalized notes for special occasions.
-          </p>
-        </section> -->
-
         <section class="shop-card" id="shop-card">
           <h2>Related Products</h2>
           <div class="balnc">
             <img src="images/assets/balnc_bottle.png" alt="Genache Blanc" />
             <h3>Grenache Blanc</h3>
             <span>
-              <a href="shop-blanc.html">View Details</a>
+              <a href="shop-blanc">View Details</a>
             </span>
           </div>
         </section>
       </section>
 
+      <!-- FAQ Section
+      <section class="faq">
+        <h2>FAQs</h2>
+        <ul>
+          <li>
+            <strong>How should I store this wine?</strong> Store in a cool, dark
+            place at a consistent temperature.
+          </li>
+          <li>
+            <strong>How long will this wine age?</strong> Both wines will evolve
+            in complexity for up to 2 years.
+          </li>
+          <li>
+            <strong>What is the best way to serve it?</strong> Serve Blanc at
+            10-12°C and Noir at 12-16°C.
+          </li>
+          <li>
+            <strong
+              >Where can I find The African Diamond in local stores?</strong
+            >
+            Use our store locator or contact us to find a stockist near you.
+          </li>
+        </ul>
+      </section> -->
+
+      <!-- Age Verification Modal -->
+      <div id="age-check-modal" class="modal">
+        <div class="modal-content">
+            <img class="logo" src="images/icons/main_logo.webp" alt="Logo">
+            <h2>Age <span class="highlight">Verification</span></h2>
+            <p>Welcome to The African Diamond. </p>
+            <p>We encourage responsible enjoyment of our wines. </br>
+              By entering our site &mdash; you affirm that you are of legal drinking age.</p>
+            <div class="modal-buttons">
+                <button id="yes-button" class="proceed-btn">Agree</button>
+                <button id="no-button" class="exit-btn">Close</button>
+            </div>
+            <p class="legal-info">
+                Entering the site you agree with our 
+                <a href="terms">terms and conditions</a> and 
+                <a href="privacy-policy">privacy policy</a>.
+            </p>
+        </div>
+    </div>
+
       <footer>
-        <p><a href="privacy-policy.html">PRIVACY POLICY</a></p> | 
-        <p><a href="terms.html">TERMS & CONDITIONS</a></p> | 
+        <p><a href="privacy-policy">PRIVACY POLICY</a></p> | 
+        <p><a href="terms">TERMS & CONDITIONS</a></p> | 
         <p>&copy; 2023 THE AFRICAN DIAMOND</p>
       </footer>
     </main>
@@ -423,7 +455,7 @@
         // Form validation: check if all fields are filled
         const reviewText = document.getElementById("reviewText").value;
         const reviewTitle = document.getElementById("reviewTitle").value;
-        const email = document.getElementById("email").value;
+        const email = document.getElementById("r.email").value;
 
         if (!reviewText || !reviewTitle || !email) {
           alert("Please fill out all required fields.");
@@ -449,26 +481,71 @@
 
       const bottlePrice = 235;
       const casePrice = 1110;
-      const duoPrice = 370;
-      const shippingFee = 50;
 
-      const bottleQtyInput = document.getElementById('bottleQty');
-      const caseQtyInput = document.getElementById('caseQty');
+      const blancBottlePrice = 210;
+      const blancCasePrice = 1080;
+
+      const duoPrice = 370;
+
+      // Rates
+      const localRate = 60;
+      const domesticStandardRate = 80;
+
+      const noirBottleQtyInput = document.getElementById('noirBottleQty');
+      const noirCaseQtyInput = document.getElementById('noirCaseQty');
+      const blancbottleQtyInput = document.getElementById('blancbottleQty');
+      const blancCaseQtyInput = document.getElementById('blancCaseQty');
       const duoQtyInput = document.getElementById('duoQty');
       const totalAmountElement = document.getElementById('totalAmount');
+      const shippingFeeElement = document.getElementById('shippingFee');
+      const addressInput = document.getElementById('address');
+      const pfAmountInput = document.getElementById('pfAmount');
+      const pfItemNameInput = document.getElementById('pfItemName');
+
+      // Function to calculate shipping fee based on address
+      function calculateShippingFee() {
+        const address = addressInput.value.toLowerCase();
+
+        // Apply local rate if Johannesburg is mentioned, otherwise default to domestic
+        if (/johannesburg|jhb/i.test(address)) {
+          return { fee: localRate, label: 'Johannesburg Rate' };
+        } else {
+          return { fee: domesticStandardRate, label: 'Domestic Rate' };
+        }
+      }
 
       // Function to calculate total order amount
       function calculateTotal() {
-        const bottleQty = parseInt(bottleQtyInput.value) || 0;
-        const caseQty = parseInt(caseQtyInput.value) || 0;
+        const noirBottleQty = parseInt(noirBottleQtyInput.value) || 0;
+        const noirCaseQty = parseInt(noirCaseQtyInput.value) || 0;
+        const blancbottleQty = parseInt(blancbottleQtyInput.value) || 0;
+        const blancCaseQty = parseInt(blancCaseQtyInput.value) || 0;
         const duoQty = parseInt(duoQtyInput.value) || 0;
 
-        const totalAmount = (bottleQty * bottlePrice) + (caseQty * casePrice) + (duoQty * duoPrice) + shippingFee;
+        const shipping = calculateShippingFee();
+        shippingFeeElement.textContent = `R${shipping.fee.toFixed(2)} (${shipping.label})`;
+
+        const totalAmount = (blancbottleQty * blancBottlePrice) + (blancCaseQty * blancCasePrice) + (noirBottleQty * bottlePrice) + (noirCaseQty * casePrice) + (duoQty * duoPrice) + shipping.fee;
         totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
+
+        // Update PayFast form fields
+        pfAmountInput.value = totalAmount.toFixed(2); // PayFast amount
+
+        // Create an array of items with non-zero quantities
+        const selectedItems = [
+          noirBottleQty > 0 ? `${noirBottleQty} Noir Bottles` : null,
+          noirCaseQty > 0 ? `${noirCaseQty} Noir Cases` : null,
+          blancbottleQty > 0 ? `${blancbottleQty} Blanc Bottles` : null,
+          blancCaseQty > 0 ? `${blancCaseQty} Blanc Cases` : null,
+          duoQty > 0 ? `${duoQty} Duos` : null,
+        ].filter(item => item !== null); // Filter out null items
+
+        // Join the selected items with commas and set it as the item name
+        pfItemNameInput.value = selectedItems.join(', ');
       }
 
-      // Update total amount when quantities change
-      [bottleQtyInput, caseQtyInput, duoQtyInput].forEach(input => {
+      // Update total amount and shipping fee when address or quantities change
+      [addressInput, noirBottleQtyInput, noirCaseQtyInput, blancbottleQtyInput, blancCaseQtyInput, duoQtyInput].forEach(input => {
         input.addEventListener('input', calculateTotal);
       });
 
@@ -485,37 +562,10 @@
 
       // Close modal on clicking outside modal content
       window.onclick = function(event) {
-  if (event.target == orderModal) {
-    orderModal.style.display = 'none';
-  }
-};
-
-      // Handle form submission
-      orderForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get form values
-        const bottleQty = document.getElementById('bottleQty').value || 0;
-        const caseQty = document.getElementById('caseQty').value || 0;
-        const duoQty = document.getElementById('duoQty').value || 0;
-        const address = document.getElementById('address').value;
-        // const payment = document.getElementById('payment').value;
-        const email = document.getElementById('email').value;
-
-        // Calculate total
-        const totalAmount = (bottleQty * bottlePrice) + (caseQty * casePrice) + (duoQty * duoPrice) + shippingFee;
-
-        // Prepare order details
-        const subject = `New Order: Bottles - ${bottleQty}, Cases - ${caseQty}, Duos - ${duoQty}`;
-        const body = `Bottles: ${bottleQty}\nCases: ${caseQty}\nDuos: ${duoQty}\nDelivery Address: ${address}\nEmail: ${email}\nTotal Amount: R${totalAmount.toFixed(2)}\nShipping Fee: R50.00`;//\nPayment Method: ${payment}
-
-        // Send order details via email (using mailto link in this case)
-        const mailtoLink = `mailto:sales@theafricandiamond.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
-
-        // Close the modal after submission
-        orderModal.style.display = 'none';
-      });
+        if (event.target == orderModal) {
+          orderModal.style.display = 'none';
+        }
+      };
 
     </script>
   </body>
