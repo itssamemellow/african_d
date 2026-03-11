@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The African Diamond &mdash; Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/f1cfb0d208038e21ad90267089ab2584?family=Felix+Titling+V2"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/icons/head_icon.webp"
+      type="image/x-icon"
+    />
+    <meta
+      name="google-site-verification"
+      content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8"
+    />
+  </head>
+  <body>
+    <main id="shop-details">
+      <header>
+        <ul>
+          <li class="homebutton">
+            <a href="/"
+              ><img id="logo" src="images/icons/main_logo.webp" alt="Full Logo"
+            /></a>
+          </li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="wine">WINES</a></li>
+          <li><a href="events">EVENTS</a></li>
+          <li><a href="contact">CONTACT</a></li>
+          <li id="active"><a href="shop">Shop</a></li>
+          <li><a href="press">Blog</a></li>
+        </ul>
+        <nav class="hamburger" id="hamburger">
+          <div>
+            <span id="home">
+              <a href="/"
+                ><img
+                  id="logo"
+                  src="images/icons/main_logo.webp"
+                  alt="Full Logo" /></a
+            ></span>
+            <span>
+              <a href="about">ABOUT</a>
+            </span>
+            <span>
+              <a href="wine">WINES</a>
+            </span>
+            <span>
+              <a href="events">EVENTS</a>
+            </span>
+            <span>
+              <a href="contact">CONTACT</a>
+            </span>
+            <span>
+              <a href="shop">Shop</a>
+            </span>
+            <span>
+              <a href="press">Blog</a>
+            </span>
+          </div>
+        </nav>
+      </header>
+
+      <section class="brut-landing" id="landing">
+        <video
+          autoplay
+          loop
+          muted
+          src="images/videos/3698873762942492568.mp4"
+        ></video>
+      </section>
+
+      <!-- Wine section -->
+      <section class="wine-shop" id="shop">
+        <!-- Grenache Blanc Section -->
+        <section class="wine-card">
+          <h2>Succession Premium Brut</h2>
+          <span>
+            <div id="image">
+              <img
+                src="images/assets/brut_bottle.png"
+                alt="Succession Premium Brut"
+              />
+            </div>
+            <div class="wine-item">
+              <p>
+                <strong>Description:</strong> <br />Introducing Succession, the
+                newest release by African Diamond — a sparkling expression
+                crafted for those who appreciate legacy, celebration, and
+                refined taste. <br />Inspired by the idea that true wealth is
+                passed from one generation to the next, Succession represents
+                elegance, ambition, and timeless luxury.
+              </p>
+              <ul class="wine-details">
+                <li>
+                  <strong>Premium Brut:</strong>
+                  <p>
+                    The Premium Brut is a distinguished traditional blend of
+                    Chardonnay and Pinot, crafted to deliver a refined balance
+                    of fresh fruit, a delicate creamy texture, and an elegant,
+                    impeccably dry finish.
+                  </p>
+                </li>
+              </ul>
+              <h3>Price:</h3>
+              <ul class="price">
+                <li>
+                  <p>Single Bottle:</p>
+                  <span></span><em>R 235.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>The Heirloom Duo:</p>
+                  <span></span><em>R 440.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>The Dynasty Collection:</p>
+                  <span></span><em>R 935.00</em>
+                </li>
+
+                <br />
+                <h4>Collector Cases</h4>
+                <br />
+                <li>
+                  <p>Premium Brut Case (6 Bottles):</p>
+                  <span></span><em>R 1410.00</em>
+                </li>
+                <!-- <li><p>Current Status:</p><span></span><em id="stockstatus">Sold Out</em></li> -->
+              </ul>
+
+              <span id="btn">
+                <button id="openOrderModal" class="order-button">
+                  Place Order
+                </button>
+              </span>
+            </div>
+          </span>
+        </section>
+
+        <!-- Order Modal -->
+        <div id="orderModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeOrderModal">&times;</span>
+            <h2>Place Your Order</h2>
+
+            <form
+              id="orderForm"
+              action="https://www.payfast.co.za/eng/process"
+              method="POST"
+            >
+              <input type="hidden" name="merchant_id" value="25233413" />
+              <input type="hidden" name="merchant_key" value="4tvvj2efmay1d" />
+              <input type="hidden" name="amount" value="100.00" />
+              <input type="hidden" name="item_name" value="Test Item" />
+              <input
+                type="hidden"
+                name="return_url"
+                value="https://theafricandiamond.co.za/payment-success"
+              />
+              <input
+                type="hidden"
+                name="cancel_url"
+                value="https://theafricandiamond.co.za/payment-cancelled.html"
+              />
+
+              <input type="hidden" id="pfAmount" name="amount" value="100.00" />
+              <input
+                type="hidden"
+                id="pfItemName"
+                name="item_name"
+                value="Order from The African Diamond"
+              />
+
+              <div>
+                <h4 class="brut">Premium Brut</h4>
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="brutBottleQty"
+                    >Single Bottle (R235.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="brutBottleQty"
+                    name="brutBottleQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="brutCaseQty">Case of 6 Bottles (R1410.00)</label>
+                  <input
+                    type="number"
+                    id="brutCaseQty"
+                    name="brutCaseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <h4 class="rose">Premium Brut Rosé</h4>
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="roseBottleQty"
+                    >Single Bottle (R255.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="roseBottleQty"
+                    name="roseBottleQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="roseCaseQty">Case of 6 Bottles (R1530.00)</label>
+                  <input
+                    type="number"
+                    id="roseCaseQty"
+                    name="roseCaseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <h4 class="collections">Choose Your Legacy</h4>
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="heirloomDuoQty">The Heirloom Duo (R440.00)</label>
+                  <input
+                    type="number"
+                    id="heirloomDuoQty"
+                    name="heirloomDuoQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="dynastyQty"
+                    >The Dynasty Collection - 4 Bottles (R935.00)</label
+                  >
+                  <input
+                    type="number"
+                    id="dynastyQty"
+                    name="dynastyQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+              </div>
+
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+
+              <label for="address">Delivery Address</label>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter your delivery address..."
+                required
+              ></textarea>
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+
+              <span class="payment-wrapper" id="payment">
+                <label for="shippingFee">Shipping Fee</label>
+                <p id="shippingFee">R0.00</p>
+              </span>
+
+              <span class="payment-wrapper total" id="payment">
+                <label for="totalAmount">Total Amount</label>
+                <p id="totalAmount">R0.00</p>
+              </span>
+
+              <button type="submit" class="submitBtn">Submit Order</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <section class="customer-reviews">
+          <section class="review-section">
+            <h3>Rate this product:</h3>
+            <div class="star-rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="rating-value">No rating yet</p>
+          </section>
+
+          <!-- Key Metrics <section class="key-metrics">
+            <h3>Product Ratings</h3>
+            <div class="metric">
+              <p>Quality of Product:</p>
+              <div class="rating-bar">
+                <div class="bar" style="width: 90%;"></div>
+              </div>
+              <span>4.5/5</span>
+            </div>
+    
+            <div class="metric">
+              <p>Value of Product:</p>
+              <div class="rating-bar">
+                <div class="bar" style="width: 80%;"></div>
+              </div>
+              <span>4/5</span>
+            </div>
+    
+            <div class="metric">
+              <p>Purchase Again:</p>
+              <div class="rating-bar">
+                <div class="bar" style="width: 95%;"></div>
+              </div>
+              <span>4.8/5</span>
+            </div>
+          </section> -->
+
+          <section class="cta-review">
+            <a id="openReviewModal" class="review-button">Write a Review</a>
+          </section>
+        </section>
+
+        <!-- Pop-up Review Modal -->
+        <div id="reviewModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Submit Your Review</h2>
+
+            <!-- Review Form -->
+            <form id="reviewForm">
+              <label id="ratingLabel" for="rating"
+                >Overall Rating<em>*</em></label
+              >
+              <div class="rating">
+                <span class="star" data-value="5">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="1">&#9733;</span>
+              </div>
+              <p id="ratingDisplay">
+                1 out of 5 stars selected. Product is poor.
+              </p>
+
+              <label for="reviewText">Review<em>*</em></label>
+              <textarea
+                id="reviewText"
+                name="reviewText"
+                placeholder="Write your review here..."
+                required
+              ></textarea>
+
+              <label for="reviewTitle">Review Title<em>*</em></label>
+              <input
+                type="text"
+                id="reviewTitle"
+                name="reviewTitle"
+                placeholder="Example: Grenache Noir Taste"
+                required
+              />
+
+              <label for="email">Your Email<em>*</em></label>
+              <input type="email" id="r.email" name="email" required />
+
+              <button type="submit" class="submitBtn">Submit Review</button>
+            </form>
+            <p class="required"><em>*</em> Required</p>
+          </div>
+        </div>
+
+        <section class="products" id="shop-card">
+          <h2>Related Products</h2>
+          <div class="products">
+            <div class="noir">
+              <img
+                src="images/assets/brut_rose_bottle.png"
+                alt="Genache Noir"
+              />
+              <h3>Premium Rosé</h3>
+              <span>
+                <a href="shop-rose">View Details</a>
+              </span>
+            </div>
+            <div class="balnc">
+              <img src="images/assets/balnc_bottle.png" alt="Genache Blanc" />
+              <h3>Grenache Blanc</h3>
+              <span>
+                <a href="shop-blanc">View Details</a>
+              </span>
+            </div>
+            <div class="noir">
+              <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
+              <h3>Grenache Noir</h3>
+              <span>
+                <a href="shop-noir">View Details</a>
+              </span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- FAQ Section
+      <section class="faq">
+        <h2>FAQs</h2>
+        <ul>
+          <li>
+            <strong>How should I store this wine?</strong> Store in a cool, dark
+            place at a consistent temperature.
+          </li>
+          <li>
+            <strong>How long will this wine age?</strong> Both wines will evolve
+            in complexity for up to 2 years.
+          </li>
+          <li>
+            <strong>What is the best way to serve it?</strong> Serve Blanc at
+            10-12°C and Noir at 12-16°C.
+          </li>
+          <li>
+            <strong
+              >Where can I find The African Diamond in local stores?</strong
+            >
+            Use our store locator or contact us to find a stockist near you.
+          </li>
+        </ul>
+      </section> -->
+
+      <!-- Age Verification Modal -->
+      <div id="age-check-modal" class="modal">
+        <div class="modal-content">
+          <img class="logo" src="images/icons/main_logo.webp" alt="Logo" />
+          <h2>Age <span class="highlight">Verification</span></h2>
+          <p>Welcome to The African Diamond.</p>
+          <p>
+            We encourage responsible enjoyment of our wines. <br />
+            By entering our site &mdash; you affirm that you are of legal
+            drinking age.
+          </p>
+          <div class="modal-buttons">
+            <button id="yes-button" class="proceed-btn">Agree</button>
+            <button id="no-button" class="exit-btn">Close</button>
+          </div>
+          <p class="legal-info">
+            Entering the site you agree with our
+            <a href="terms">terms and conditions</a> and
+            <a href="privacy-policy">privacy policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p><a href="privacy-policy">PRIVACY POLICY</a></p>
+        |
+        <p><a href="terms">TERMS & CONDITIONS</a></p>
+        |
+        <p>&copy; 2023 THE AFRICAN DIAMOND</p>
+      </footer>
+    </main>
+
+    <div class="cursor"></div>
+    <script src="script.js"></script>
+
+    <script>
+      const stars = document.querySelectorAll(".star");
+      const ratingValue = document.getElementById("rating-value");
+
+      // Handle star hover and click events
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          resetStars();
+          highlightStars(star.getAttribute("data-value"));
+        });
+
+        // Show selected rating on click
+        star.addEventListener("click", () => {
+          ratingValue.innerText = `You rated this product ${star.getAttribute("data-value")} out of 5!
+          We'd love to hear your thoughts below.`;
+        });
+      });
+
+      // Function to reset all stars
+      function resetStars() {
+        stars.forEach((star) => (star.innerHTML = "&#9733;"));
+      }
+
+      // Function to highlight stars based on the rating
+      function highlightStars(rating) {
+        stars.forEach((star) => {
+          if (star.getAttribute("data-value") <= rating) {
+            star.style.color = "#bb9339";
+          } else {
+            star.style.color = "grey";
+          }
+        });
+      }
+
+      // Script for Review Modal and Form Handling
+
+      // Elements
+      const modal = document.getElementById("reviewModal");
+      const openModalBtn = document.getElementById("openReviewModal");
+      const closeModal = document.getElementById("closeModal");
+      const form = document.getElementById("reviewForm");
+      const starrate = document.querySelectorAll(".star");
+      let rating = 1;
+
+      // Open modal on button click
+      openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+
+      // Close modal on clicking the close button
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // Close modal on clicking outside the modal content
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Star rating logic
+      starrate.forEach((star) => {
+        star.addEventListener("click", () => {
+          // Remove selected class from all stars
+          starrate.forEach((s) => s.classList.remove("selected"));
+
+          // Add selected class to clicked star and all previous stars
+          star.classList.add("selected");
+          for (let i = 0; i < star.dataset.value; i++) {
+            starrate[i].classList.add("selected");
+          }
+
+          // Update rating
+          rating = star.dataset.value;
+          document.getElementById("ratingDisplay").textContent =
+            `${rating} out of 5 stars selected.`;
+        });
+      });
+
+      // Handle form submission
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Form validation: check if all fields are filled
+        const reviewText = document.getElementById("reviewText").value;
+        const reviewTitle = document.getElementById("reviewTitle").value;
+        const email = document.getElementById("r.email").value;
+
+        if (!reviewText || !reviewTitle || !email) {
+          alert("Please fill out all required fields.");
+          return;
+        }
+
+        // Send form data via email (using mailto for this example)
+        const subject = `New Review: ${reviewTitle}`;
+        const body = `Rating: ${rating}/5\nReview: ${reviewText}\nEmail: ${email}`;
+        const mailtoLink = `mailto:info@theafricandiamond.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
+        // Close modal after submission
+        modal.style.display = "none";
+      });
+
+      // Order Modal JavaScript
+      const orderModal = document.getElementById("orderModal");
+      const openOrderModal = document.getElementById("openOrderModal");
+      const closeOrderModal = document.getElementById("closeOrderModal");
+      const orderForm = document.getElementById("orderForm");
+
+      // New Pricing Constants
+      const brutBottlePrice = 235;
+      const brutCasePrice = 1410;
+
+      const roseBottlePrice = 255;
+      const roseCasePrice = 1530;
+
+      const heirloomDuoPrice = 440;
+      const dynastyPrice = 935;
+
+      // Rates
+      const localRate = 60;
+      const domesticStandardRate = 80;
+
+      // Input Elements
+      const brutBottleQtyInput = document.getElementById("brutBottleQty");
+      const brutCaseQtyInput = document.getElementById("brutCaseQty");
+      const roseBottleQtyInput = document.getElementById("roseBottleQty");
+      const roseCaseQtyInput = document.getElementById("roseCaseQty");
+      const heirloomDuoQtyInput = document.getElementById("heirloomDuoQty");
+      const dynastyQtyInput = document.getElementById("dynastyQty");
+
+      const totalAmountElement = document.getElementById("totalAmount");
+      const shippingFeeElement = document.getElementById("shippingFee");
+      const addressInput = document.getElementById("address");
+      const pfAmountInput = document.getElementById("pfAmount");
+      const pfItemNameInput = document.getElementById("pfItemName");
+
+      // Function to calculate shipping fee based on address
+      function calculateShippingFee() {
+        const address = addressInput.value.toLowerCase();
+
+        // Apply local rate if Johannesburg is mentioned, otherwise default to domestic
+        if (/johannesburg|jhb/i.test(address)) {
+          return { fee: localRate, label: "Johannesburg Rate" };
+        } else {
+          return { fee: domesticStandardRate, label: "Domestic Rate" };
+        }
+      }
+
+      // Function to calculate total order amount
+      function calculateTotal() {
+        const brutBottleQty = parseInt(brutBottleQtyInput.value) || 0;
+        const brutCaseQty = parseInt(brutCaseQtyInput.value) || 0;
+        const roseBottleQty = parseInt(roseBottleQtyInput.value) || 0;
+        const roseCaseQty = parseInt(roseCaseQtyInput.value) || 0;
+        const heirloomDuoQty = parseInt(heirloomDuoQtyInput.value) || 0;
+        const dynastyQty = parseInt(dynastyQtyInput.value) || 0;
+
+        const shipping = calculateShippingFee();
+        shippingFeeElement.textContent = `R${shipping.fee.toFixed(2)} (${shipping.label})`;
+
+        const totalAmount =
+          brutBottleQty * brutBottlePrice +
+          brutCaseQty * brutCasePrice +
+          roseBottleQty * roseBottlePrice +
+          roseCaseQty * roseCasePrice +
+          heirloomDuoQty * heirloomDuoPrice +
+          dynastyQty * dynastyPrice +
+          shipping.fee;
+
+        totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
+
+        // Update PayFast form fields
+        pfAmountInput.value = totalAmount.toFixed(2); // PayFast amount
+
+        // Create an array of items with non-zero quantities
+        const selectedItems = [
+          brutBottleQty > 0 ? `${brutBottleQty} Brut Bottles` : null,
+          brutCaseQty > 0 ? `${brutCaseQty} Brut Cases` : null,
+          roseBottleQty > 0 ? `${roseBottleQty} Rosé Bottles` : null,
+          roseCaseQty > 0 ? `${roseCaseQty} Rosé Cases` : null,
+          heirloomDuoQty > 0 ? `${heirloomDuoQty} Heirloom Duos` : null,
+          dynastyQty > 0 ? `${dynastyQty} Dynasty Collections` : null,
+        ].filter((item) => item !== null); // Filter out null items
+
+        // Join the selected items with commas and set it as the item name
+        pfItemNameInput.value =
+          selectedItems.join(", ") || "Order from The African Diamond";
+      }
+
+      // Update total amount and shipping fee when address or quantities change
+      [
+        addressInput,
+        brutBottleQtyInput,
+        brutCaseQtyInput,
+        roseBottleQtyInput,
+        roseCaseQtyInput,
+        heirloomDuoQtyInput,
+        dynastyQtyInput,
+      ].forEach((input) => {
+        input.addEventListener("input", calculateTotal);
+      });
+
+      // Open order modal on button click
+      if (openOrderModal) {
+        openOrderModal.addEventListener("click", () => {
+          orderModal.style.display = "flex";
+          calculateTotal(); // Recalculate total when modal opens
+        });
+      }
+
+      // Close modal on clicking close button
+      if (closeOrderModal) {
+        closeOrderModal.addEventListener("click", () => {
+          orderModal.style.display = "none";
+        });
+      }
+
+      // Close modal on clicking outside modal content
+      window.onclick = function (event) {
+        if (event.target == orderModal) {
+          orderModal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
