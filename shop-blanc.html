@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,10 @@
       href="images/icons/head_icon.webp"
       type="image/x-icon"
     />
-    <meta name="google-site-verification" content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8" />
+    <meta
+      name="google-site-verification"
+      content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8"
+    />
   </head>
   <body>
     <main id="shop-details">
@@ -84,19 +87,20 @@
             </div>
             <div class="wine-item">
               <p>
-                <strong>Description:</strong> </br>Fermented with wild yeasts in
-                300-liter French oak barrels, our Grenache Blanc develops rich
-                and complex characters. This handcrafted wine embodies minimal
-                intervention and offers a delightful experience with every sip.
+                <strong>Description:</strong> <br />Fermented with wild yeasts
+                in 300-liter French oak barrels, our Grenache Blanc develops
+                rich and complex characters. This handcrafted wine embodies
+                minimal intervention and offers a delightful experience with
+                every sip.
               </p>
               <ul class="wine-details">
                 <li>
                   <strong>Tasting Notes:</strong>
                   <p>
-                    White stone fruit, hints of
-                    citrus, jasmine, and a touch of minerality. The French oak
-                    imparts subtle vanilla and spice notes.
-                  </p> 
+                    White stone fruit, hints of citrus, jasmine, and a touch of
+                    minerality. The French oak imparts subtle vanilla and spice
+                    notes.
+                  </p>
                 </li>
                 <li>
                   <strong>Origin:</strong>
@@ -105,30 +109,39 @@
                 <li>
                   <strong>Vineyard:</strong>
                   <p>
-                    Low yield, bush-vine Grenache Blanc
-                    on well-drained sandy soil.
+                    Low yield, bush-vine Grenache Blanc on well-drained sandy
+                    soil.
                   </p>
                 </li>
                 <li>
                   <strong>Wine-making:</strong>
                   <p>
-                    Wild fermented in French oak
-                    barrels, aged for 8 months on fine lees for texture and depth.
+                    Wild fermented in French oak barrels, aged for 8 months on
+                    fine lees for texture and depth.
                   </p>
                 </li>
                 <li>
                   <strong>Serve & Aging:</strong>
-                  <p> 
-                    Best served at 10 to 12°C. It 
-                    will continue to evolve over the next 2 years.
+                  <p>
+                    Best served at 10 to 12°C. It will continue to evolve over
+                    the next 2 years.
                   </p>
                 </li>
               </ul>
               <h3>Price:</h3>
               <ul class="price">
-                <li><p>Single Bottle: </p><span></span><em>R 210.00</em></li>
-                <li><p>Case (6 Bottles): </p><span></span><em>R 1080.00</em></li>
-                <li><p>Wine Duo (Blanc + Noir): </p><span></span><em>R 370.00</em></li>
+                <li>
+                  <p>Single Bottle:</p>
+                  <span></span><em>R 210.00</em>
+                </li>
+                <li>
+                  <p>Case (6 Bottles):</p>
+                  <span></span><em>R 1080.00</em>
+                </li>
+                <li>
+                  <p>Wine Duo (Blanc + Noir):</p>
+                  <span></span><em>R 370.00</em>
+                </li>
                 <!-- <li><p>Current Status:</p><span></span><em id="stockstatus">Sold Out</em></li> -->
               </ul>
               <h4>Pairing Suggestions:</h4>
@@ -138,8 +151,15 @@
               </p>
 
               <span id="btn">
-                <button id="openOrderModal" class="order-button">Place Order</button>
-                <a target="_blank" href="images/assets/AFRICAN_DIAMOND_Technical_Sheet_Grenache_Blanc_2023.pdf" download="African Diamond - Grenache Blanc Tasting Notes"><button>Download Full Tasting Notes</button></a>
+                <button id="openOrderModal" class="order-button">
+                  Place Order
+                </button>
+                <a
+                  target="_blank"
+                  href="images/assets/AFRICAN_DIAMOND_Technical_Sheet_Grenache_Blanc_2023.pdf"
+                  download="African Diamond - Grenache Blanc Tasting Notes"
+                  ><button>Download Full Tasting Notes</button></a
+                >
               </span>
             </div>
           </span>
@@ -150,53 +170,123 @@
           <div class="modal-content">
             <span class="close" id="closeOrderModal">&times;</span>
             <h2>Place Your Order</h2>
-    
+
             <!-- Order Form -->
-            <form id="orderForm" action="https://www.payfast.co.za/eng/process" method="POST">
+            <form
+              id="orderForm"
+              action="https://www.payfast.co.za/eng/process"
+              method="POST"
+            >
               <!-- PayFast Required Fields -->
-              <input type="hidden" name="merchant_id" value="25233413">
-              <input type="hidden" name="merchant_key" value="4tvvj2efmay1d">
-              <input type="hidden" name="amount" value="100.00"> <!-- Amount in decimal format -->
-              <input type="hidden" name="item_name" value="Test Item">
-              <input type="hidden" name="return_url" value="https://theafricandiamond.co.za/payment-success">
-              <input type="hidden" name="cancel_url" value="https://theafricandiamond.co.za/payment-cancelled.html">
+              <input type="hidden" name="merchant_id" value="25233413" />
+              <input type="hidden" name="merchant_key" value="4tvvj2efmay1d" />
+              <input type="hidden" name="amount" value="100.00" />
+              <!-- Amount in decimal format -->
+              <input type="hidden" name="item_name" value="Test Item" />
+              <input
+                type="hidden"
+                name="return_url"
+                value="https://theafricandiamond.co.za/payment-success"
+              />
+              <input
+                type="hidden"
+                name="cancel_url"
+                value="https://theafricandiamond.co.za/payment-cancelled.html"
+              />
 
               <!-- PayFast Payment Details -->
-              <input type="hidden" id="pfAmount" name="amount" value="100.00">
-              <input type="hidden" id="pfItemName" name="item_name" value="Order from The African Diamond">
+              <input type="hidden" id="pfAmount" name="amount" value="100.00" />
+              <input
+                type="hidden"
+                id="pfItemName"
+                name="item_name"
+                value="Order from The African Diamond"
+              />
 
               <div>
-              <h4 class="blanc">Grenache Blanc</h4>
-              <!-- Bottle Quantity -->
-              <span id="quantity"><label for="blancbottleQty">Single Bottle (R210.00 each)</label>
-              <input type="number" id="blancbottleQty" name="blancbottleQty" min="0" value="0"></span>
+                <h4 class="blanc">Grenache Blanc</h4>
+                <!-- Bottle Quantity -->
+                <span id="quantity"
+                  ><label for="blancbottleQty"
+                    >Single Bottle (R210.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="blancbottleQty"
+                    name="blancbottleQty"
+                    min="0"
+                    value="0"
+                /></span>
 
-              <!-- Case Quantity -->
-              <span id="quantity"><label for="blancCaseQty">Case of 6 Bottles (R1080.00)</label>
-              <input type="number" id="blancCaseQty" name="blancCaseQty" min="0" value="0"></span>
+                <!-- Case Quantity -->
+                <span id="quantity"
+                  ><label for="blancCaseQty"
+                    >Case of 6 Bottles (R1080.00)</label
+                  >
+                  <input
+                    type="number"
+                    id="blancCaseQty"
+                    name="blancCaseQty"
+                    min="0"
+                    value="0"
+                /></span>
 
-              <h4 class="noir">Grenache Noir</h4>
-              <!-- Bottle Quantity -->
-              <span id="quantity"><label for="noirBottleQty">Single Bottle (R235.00 each)</label>
-              <input type="number" id="noirBottleQty" name="noirBottleQty" min="0" value="0"></span>
+                <h4 class="noir">Grenache Noir</h4>
+                <!-- Bottle Quantity -->
+                <span id="quantity"
+                  ><label for="noirBottleQty"
+                    >Single Bottle (R235.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="noirBottleQty"
+                    name="noirBottleQty"
+                    min="0"
+                    value="0"
+                /></span>
 
-              <!-- Case Quantity -->
-              <span id="quantity"><label for="noirCaseQty">Case of 6 Bottles (R1110.00)</label>
-              <input type="number" id="noirCaseQty" name="noirCaseQty" min="0" value="0"></span>
+                <!-- Case Quantity -->
+                <span id="quantity"
+                  ><label for="noirCaseQty">Case of 6 Bottles (R1110.00)</label>
+                  <input
+                    type="number"
+                    id="noirCaseQty"
+                    name="noirCaseQty"
+                    min="0"
+                    value="0"
+                /></span>
 
-              <h4 class="duo">Special Offers</h4>
-              <!-- Duo Quantity -->
-              <span id="quantity"><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)</label>
-              <input type="number" id="duoQty" name="duoQty" min="0" value="0"></span>
+                <h4 class="duo">Special Offers</h4>
+                <!-- Duo Quantity -->
+                <span id="quantity"
+                  ><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)</label>
+                  <input
+                    type="number"
+                    id="duoQty"
+                    name="duoQty"
+                    min="0"
+                    value="0"
+                /></span>
               </div>
 
               <!-- Name -->
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
 
               <!-- Delivery Address -->
               <label for="address">Delivery Address</label>
-              <textarea id="address" name="address" placeholder="Enter your delivery address..." required></textarea>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter your delivery address..."
+                required
+              ></textarea>
 
               <!-- Payment Method
               <label for="payment">Payment Method</label>
@@ -208,15 +298,25 @@
 
               <!-- Email -->
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
 
               <!-- Shipping Fee -->
-              <span id="payment"><label for="shipping">Shipping Fee</label>
-              <p id="shippingFee">R0.00</p></span>
+              <span id="payment"
+                ><label for="shipping">Shipping Fee</label>
+                <p id="shippingFee">R0.00</p></span
+              >
 
               <!-- Total Amount -->
-              <span id="payment" class="total"><label for="totalAmount">Total Amount</label>
-              <p id="totalAmount">R0.00</p></span>
+              <span id="payment" class="total"
+                ><label for="totalAmount">Total Amount</label>
+                <p id="totalAmount">R0.00</p></span
+              >
 
               <button type="submit" class="submitBtn">Submit Order</button>
             </form>
@@ -236,7 +336,7 @@
             </div>
             <p id="rating-value">No rating yet</p>
           </section>
-    
+
           <!-- Key Metrics <section class="key-metrics">
             <h3>Product Ratings</h3>
             <div class="metric">
@@ -263,21 +363,23 @@
               <span>4.8/5</span>
             </div>
           </section> -->
-    
+
           <section class="cta-review">
             <a id="openReviewModal" class="review-button">Write a Review</a>
           </section>
         </section>
-        
+
         <!-- Pop-up Review Modal -->
         <div id="reviewModal" class="modal">
           <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <h2>Submit Your Review</h2>
-            
+
             <!-- Review Form -->
             <form id="reviewForm">
-              <label id="ratingLabel" for="rating">Overall Rating<em>*</em></label>
+              <label id="ratingLabel" for="rating"
+                >Overall Rating<em>*</em></label
+              >
               <div class="rating">
                 <span class="star" data-value="5">&#9733;</span>
                 <span class="star" data-value="4">&#9733;</span>
@@ -285,31 +387,63 @@
                 <span class="star" data-value="2">&#9733;</span>
                 <span class="star" data-value="1">&#9733;</span>
               </div>
-              <p id="ratingDisplay">1 out of 5 stars selected. Product is poor.</p>
-  
+              <p id="ratingDisplay">
+                1 out of 5 stars selected. Product is poor.
+              </p>
+
               <label for="reviewText">Review<em>*</em></label>
-              <textarea id="reviewText" name="reviewText" placeholder="Write your review here..." required></textarea>
-  
+              <textarea
+                id="reviewText"
+                name="reviewText"
+                placeholder="Write your review here..."
+                required
+              ></textarea>
+
               <label for="reviewTitle">Review Title<em>*</em></label>
-              <input type="text" id="reviewTitle" name="reviewTitle" placeholder="Example: Grenache Noir Taste" required>
-  
+              <input
+                type="text"
+                id="reviewTitle"
+                name="reviewTitle"
+                placeholder="Example: Grenache Noir Taste"
+                required
+              />
+
               <label for="email">Your Email<em>*</em></label>
-              <input type="email" id="r.email" name="email" required>
-  
+              <input type="email" id="r.email" name="email" required />
+
               <button type="submit" class="submitBtn">Submit Review</button>
             </form>
             <p class="required"><em>*</em> Required</p>
           </div>
         </div>
 
-        <section class="shop-card" id="shop-card">
+        <section class="products" id="shop-card">
           <h2>Related Products</h2>
-          <div class="noir">
-            <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
-            <h3>Grenache Noir</h3>
-            <span>
-              <a href="shop-noir">View Details</a>
-            </span>
+          <div class="products">
+            <div class="noir">
+              <img src="images/assets/brut_bottle.png" alt="Genache Noir" />
+              <h3>Premium<br />Brut</h3>
+              <span>
+                <a href="shop-brut">View Details</a>
+              </span>
+            </div>
+            <div class="noir">
+              <img
+                src="images/assets/brut_rose_bottle.png"
+                alt="Genache Noir"
+              />
+              <h3>Premium<br />Brut Rosé</h3>
+              <span>
+                <a href="shop-rose">View Details</a>
+              </span>
+            </div>
+            <div class="noir">
+              <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
+              <h3>Grenache<br />Noir</h3>
+              <span>
+                <a href="shop-noir">View Details</a>
+              </span>
+            </div>
           </div>
         </section>
       </section>
@@ -338,30 +472,35 @@
           </li>
         </ul>
       </section> -->
-      
+
       <!-- Age Verification Modal -->
       <div id="age-check-modal" class="modal">
         <div class="modal-content">
-            <img class="logo" src="images/icons/main_logo.webp" alt="Logo">
-            <h2>Age <span class="highlight">Verification</span></h2>
-            <p>Welcome to The African Diamond. </p>
-            <p>We encourage responsible enjoyment of our wines. </br>
-              By entering our site &mdash; you affirm that you are of legal drinking age.</p>
-            <div class="modal-buttons">
-                <button id="yes-button" class="proceed-btn">Agree</button>
-                <button id="no-button" class="exit-btn">Close</button>
-            </div>
-            <p class="legal-info">
-                Entering the site you agree with our 
-                <a href="terms">terms and conditions</a> and 
-                <a href="privacy-policy">privacy policy</a>.
-            </p>
+          <img class="logo" src="images/icons/main_logo.webp" alt="Logo" />
+          <h2>Age <span class="highlight">Verification</span></h2>
+          <p>Welcome to The African Diamond.</p>
+          <p>
+            We encourage responsible enjoyment of our wines. <br />
+            By entering our site &mdash; you affirm that you are of legal
+            drinking age.
+          </p>
+          <div class="modal-buttons">
+            <button id="yes-button" class="proceed-btn">Agree</button>
+            <button id="no-button" class="exit-btn">Close</button>
+          </div>
+          <p class="legal-info">
+            Entering the site you agree with our
+            <a href="terms">terms and conditions</a> and
+            <a href="privacy-policy">privacy policy</a>.
+          </p>
         </div>
-    </div>
+      </div>
 
       <footer>
-        <p><a href="privacy-policy">PRIVACY POLICY</a></p> | 
-        <p><a href="terms">TERMS & CONDITIONS</a></p> | 
+        <p><a href="privacy-policy">PRIVACY POLICY</a></p>
+        |
+        <p><a href="terms">TERMS & CONDITIONS</a></p>
+        |
         <p>&copy; 2023 THE AFRICAN DIAMOND</p>
       </footer>
     </main>
@@ -370,35 +509,35 @@
     <script src="script.js"></script>
 
     <script>
-      const stars = document.querySelectorAll('.star');
-      const ratingValue = document.getElementById('rating-value');
+      const stars = document.querySelectorAll(".star");
+      const ratingValue = document.getElementById("rating-value");
 
       // Handle star hover and click events
-      stars.forEach(star => {
-        star.addEventListener('mouseover', () => {
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
           resetStars();
-          highlightStars(star.getAttribute('data-value'));
+          highlightStars(star.getAttribute("data-value"));
         });
 
         // Show selected rating on click
-        star.addEventListener('click', () => {
-          ratingValue.innerText = `You rated this product ${star.getAttribute('data-value')} out of 5!
+        star.addEventListener("click", () => {
+          ratingValue.innerText = `You rated this product ${star.getAttribute("data-value")} out of 5!
           We'd love to hear your thoughts below.`;
         });
       });
 
       // Function to reset all stars
       function resetStars() {
-        stars.forEach(star => star.innerHTML = '&#9733;');
+        stars.forEach((star) => (star.innerHTML = "&#9733;"));
       }
 
       // Function to highlight stars based on the rating
       function highlightStars(rating) {
-        stars.forEach(star => {
-          if (star.getAttribute('data-value') <= rating) {
-            star.style.color = '#bb9339';
+        stars.forEach((star) => {
+          if (star.getAttribute("data-value") <= rating) {
+            star.style.color = "#bb9339";
           } else {
-            star.style.color = 'grey';
+            star.style.color = "grey";
           }
         });
       }
@@ -431,20 +570,21 @@
       };
 
       // Star rating logic
-      starrate.forEach(star => {
+      starrate.forEach((star) => {
         star.addEventListener("click", () => {
           // Remove selected class from all stars
-          starrate.forEach(s => s.classList.remove("selected"));
+          starrate.forEach((s) => s.classList.remove("selected"));
 
           // Add selected class to clicked star and all previous stars
           star.classList.add("selected");
           for (let i = 0; i < star.dataset.value; i++) {
             starrate[i].classList.add("selected");
           }
-    
+
           // Update rating
           rating = star.dataset.value;
-          document.getElementById("ratingDisplay").textContent = `${rating} out of 5 stars selected.`;
+          document.getElementById("ratingDisplay").textContent =
+            `${rating} out of 5 stars selected.`;
         });
       });
 
@@ -466,7 +606,7 @@
         const subject = `New Review: ${reviewTitle}`;
         const body = `Rating: ${rating}/5\nReview: ${reviewText}\nEmail: ${email}`;
         const mailtoLink = `mailto:info@theafricandiamond.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  
+
         window.location.href = mailtoLink;
 
         // Close modal after submission
@@ -474,10 +614,10 @@
       });
 
       // Order Modal JavaScript
-      const orderModal = document.getElementById('orderModal');
-      const openOrderModal = document.getElementById('openOrderModal');
-      const closeOrderModal = document.getElementById('closeOrderModal');
-      const orderForm = document.getElementById('orderForm');
+      const orderModal = document.getElementById("orderModal");
+      const openOrderModal = document.getElementById("openOrderModal");
+      const closeOrderModal = document.getElementById("closeOrderModal");
+      const orderForm = document.getElementById("orderForm");
 
       const bottlePrice = 235;
       const casePrice = 1110;
@@ -491,16 +631,16 @@
       const localRate = 60;
       const domesticStandardRate = 80;
 
-      const noirBottleQtyInput = document.getElementById('noirBottleQty');
-      const noirCaseQtyInput = document.getElementById('noirCaseQty');
-      const blancbottleQtyInput = document.getElementById('blancbottleQty');
-      const blancCaseQtyInput = document.getElementById('blancCaseQty');
-      const duoQtyInput = document.getElementById('duoQty');
-      const totalAmountElement = document.getElementById('totalAmount');
-      const shippingFeeElement = document.getElementById('shippingFee');
-      const addressInput = document.getElementById('address');
-      const pfAmountInput = document.getElementById('pfAmount');
-      const pfItemNameInput = document.getElementById('pfItemName');
+      const noirBottleQtyInput = document.getElementById("noirBottleQty");
+      const noirCaseQtyInput = document.getElementById("noirCaseQty");
+      const blancbottleQtyInput = document.getElementById("blancbottleQty");
+      const blancCaseQtyInput = document.getElementById("blancCaseQty");
+      const duoQtyInput = document.getElementById("duoQty");
+      const totalAmountElement = document.getElementById("totalAmount");
+      const shippingFeeElement = document.getElementById("shippingFee");
+      const addressInput = document.getElementById("address");
+      const pfAmountInput = document.getElementById("pfAmount");
+      const pfItemNameInput = document.getElementById("pfItemName");
 
       // Function to calculate shipping fee based on address
       function calculateShippingFee() {
@@ -508,9 +648,9 @@
 
         // Apply local rate if Johannesburg is mentioned, otherwise default to domestic
         if (/johannesburg|jhb/i.test(address)) {
-          return { fee: localRate, label: 'Johannesburg Rate' };
+          return { fee: localRate, label: "Johannesburg Rate" };
         } else {
-          return { fee: domesticStandardRate, label: 'Domestic Rate' };
+          return { fee: domesticStandardRate, label: "Domestic Rate" };
         }
       }
 
@@ -525,7 +665,13 @@
         const shipping = calculateShippingFee();
         shippingFeeElement.textContent = `R${shipping.fee.toFixed(2)} (${shipping.label})`;
 
-        const totalAmount = (blancbottleQty * blancBottlePrice) + (blancCaseQty * blancCasePrice) + (noirBottleQty * bottlePrice) + (noirCaseQty * casePrice) + (duoQty * duoPrice) + shipping.fee;
+        const totalAmount =
+          blancbottleQty * blancBottlePrice +
+          blancCaseQty * blancCasePrice +
+          noirBottleQty * bottlePrice +
+          noirCaseQty * casePrice +
+          duoQty * duoPrice +
+          shipping.fee;
         totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
 
         // Update PayFast form fields
@@ -538,36 +684,41 @@
           blancbottleQty > 0 ? `${blancbottleQty} Blanc Bottles` : null,
           blancCaseQty > 0 ? `${blancCaseQty} Blanc Cases` : null,
           duoQty > 0 ? `${duoQty} Duos` : null,
-        ].filter(item => item !== null); // Filter out null items
+        ].filter((item) => item !== null); // Filter out null items
 
         // Join the selected items with commas and set it as the item name
-        pfItemNameInput.value = selectedItems.join(', ');
+        pfItemNameInput.value = selectedItems.join(", ");
       }
 
-
       // Update total amount and shipping fee when address or quantities change
-      [addressInput, noirBottleQtyInput, noirCaseQtyInput, blancbottleQtyInput, blancCaseQtyInput, duoQtyInput].forEach(input => {
-        input.addEventListener('input', calculateTotal);
+      [
+        addressInput,
+        noirBottleQtyInput,
+        noirCaseQtyInput,
+        blancbottleQtyInput,
+        blancCaseQtyInput,
+        duoQtyInput,
+      ].forEach((input) => {
+        input.addEventListener("input", calculateTotal);
       });
 
       // Open order modal on button click
-      openOrderModal.addEventListener('click', () => {
-        orderModal.style.display = 'flex';
+      openOrderModal.addEventListener("click", () => {
+        orderModal.style.display = "flex";
         calculateTotal(); // Recalculate total when modal opens
       });
 
       // Close modal on clicking close button
-      closeOrderModal.addEventListener('click', () => {
-        orderModal.style.display = 'none';
+      closeOrderModal.addEventListener("click", () => {
+        orderModal.style.display = "none";
       });
 
       // Close modal on clicking outside modal content
-      window.onclick = function(event) {
+      window.onclick = function (event) {
         if (event.target == orderModal) {
-          orderModal.style.display = 'none';
+          orderModal.style.display = "none";
         }
       };
-
     </script>
   </body>
 </html>
