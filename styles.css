@@ -2513,16 +2513,30 @@ section.shop-card div span {
   gap: 24px;
   width: 96vw;
   height: auto;
+  text-align: center;
+  margin: 0 auto;
+
+  & h2 {
+    font-size: 2rem;
+    font-family: "Felix Titling V2";
+    font-weight: normal;
+    color: #333433;
+  }
 
   & div {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    width: 60%;
     gap: 12px;
+    margin: 0 auto;
 
     & div {
       display: flex;
       flex-direction: column;
+      flex-wrap: nowrap;
+      max-width: 250px;
       background-color: #d1d1d1;
       border-radius: 5px;
       aspect-ratio: 1 / 1.2;
@@ -2537,7 +2551,7 @@ section.shop-card div span {
       }
 
       & h3 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-family: "Felix Titling V2";
         font-weight: normal;
       }
@@ -3954,6 +3968,16 @@ main#shop-details section#shop-card {
     font-size: 1.8rem;
     width: 80%;
   }
+
+  .products {
+    & div {
+      width: 100%;
+
+      & div {
+        max-width: 80%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -3983,7 +4007,7 @@ main#shop-details section#shop-card {
   section.wine-shop section.wine-card span {
     & div#image {
       & img {
-        width: 120%;
+        width: 100%;
       }
     }
   }
@@ -4001,5 +4025,11 @@ main#shop-details section#shop-card {
 
   #pastevents {
     width: 96vw;
+  }
+
+  .products {
+    & div {
+      width: 80%;
+    }
   }
 }
