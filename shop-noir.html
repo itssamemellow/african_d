@@ -76,9 +76,7 @@
         </p>
       </section>
 
-      <!-- Wine section -->
       <section class="wine-shop" id="shop">
-        <!-- Grenache Noir Section -->
         <section class="wine-card">
           <h2>Grenache Noir</h2>
           <span>
@@ -165,23 +163,19 @@
           </span>
         </section>
 
-        <!-- Order Modal -->
         <div id="orderModal" class="modal">
           <div class="modal-content">
             <span class="close" id="closeOrderModal">&times;</span>
             <h2>Place Your Order</h2>
 
-            <!-- Order Form -->
             <form
               id="orderForm"
               action="https://www.payfast.co.za/eng/process"
               method="POST"
             >
-              <!-- PayFast Required Fields -->
               <input type="hidden" name="merchant_id" value="25233413" />
               <input type="hidden" name="merchant_key" value="4tvvj2efmay1d" />
               <input type="hidden" name="amount" value="100.00" />
-              <!-- Amount in decimal format -->
               <input type="hidden" name="item_name" value="Test Item" />
               <input
                 type="hidden"
@@ -194,7 +188,6 @@
                 value="https://theafricandiamond.co.za/payment-cancelled.html"
               />
 
-              <!-- PayFast Payment Details -->
               <input type="hidden" id="pfAmount" name="amount" value="100.00" />
               <input
                 type="hidden"
@@ -204,7 +197,6 @@
               />
               <div>
                 <h4 class="noir">Grenache Noir</h4>
-                <!-- Bottle Quantity -->
                 <span id="quantity"
                   ><label for="noirBottleQty"
                     >Single Bottle (R235.00 each)</label
@@ -217,7 +209,6 @@
                     value="0"
                 /></span>
 
-                <!-- Case Quantity -->
                 <span id="quantity"
                   ><label for="noirCaseQty">Case of 6 Bottles (R1110.00)</label>
                   <input
@@ -229,7 +220,6 @@
                 /></span>
 
                 <h4 class="blanc">Grenache Blanc</h4>
-                <!-- Bottle Quantity -->
                 <span id="quantity"
                   ><label for="blancbottleQty"
                     >Single Bottle (R210.00 each)</label
@@ -242,7 +232,6 @@
                     value="0"
                 /></span>
 
-                <!-- Case Quantity -->
                 <span id="quantity"
                   ><label for="blancCaseQty"
                     >Case of 6 Bottles (R1080.00)</label
@@ -256,7 +245,6 @@
                 /></span>
 
                 <h4 class="duo">Special Offers</h4>
-                <!-- Duo Quantity -->
                 <span id="quantity"
                   ><label for="duoQty">Wine Duo (Blanc + Noir) (R370.00)</label>
                   <input
@@ -268,7 +256,6 @@
                 /></span>
               </div>
 
-              <!-- Name -->
               <label for="name">Full Name</label>
               <input
                 type="text"
@@ -278,7 +265,6 @@
                 required
               />
 
-              <!-- Delivery Address -->
               <label for="address">Delivery Address</label>
               <textarea
                 id="address"
@@ -287,15 +273,13 @@
                 required
               ></textarea>
 
-              <!-- Payment Method
-              <label for="payment">Payment Method</label>
+              <!-- <label for="payment">Payment Method</label>
               <select id="payment" name="payment" required>
                 <option value="card">Credit/Debit Card</option>
                 <option value="eft">EFT</option>
                 <option value="paypal">PayPal</option>
               </select> -->
 
-              <!-- Email -->
               <label for="email">Email</label>
               <input
                 type="email"
@@ -305,13 +289,11 @@
                 required
               />
 
-              <!-- Shipping Fee -->
               <span id="payment"
                 ><label for="shipping">Shipping Fee</label>
                 <p id="shippingFee">R0.00</p></span
               >
 
-              <!-- Total Amount -->
               <span id="payment" class="total"
                 ><label for="totalAmount">Total Amount</label>
                 <p id="totalAmount">R0.00</p></span
@@ -321,7 +303,6 @@
           </div>
         </div>
 
-        <!-- Customer Reviews -->
         <section class="customer-reviews">
           <section class="review-section">
             <h3>Rate this product:</h3>
@@ -335,46 +316,21 @@
             <p id="rating-value">No rating yet</p>
           </section>
 
-          <!-- Key Metrics 
-           <section class="key-metrics">
-            <h3>Product Ratings</h3>
-            <div class="metric">
-              <p>Quality of Product:</p>
-              <div class="rating-bar">
-                <div class="bar" style="width: 90%;"></div>
-              </div>
-              <span>4.5/5</span>
-            </div>
-    
-            <div class="metric">
-              <p>Value of Product:</p>
-              <div class="rating-bar">
-                <div class="bar" style="width: 80%;"></div>
-              </div>
-              <span>4/5</span>
-            </div>
-    
-            <div class="metric">
-              <p>Purchase Again:</p>
-              <div class="rating-bar">
-                <div class="bar" style="width: 95%;"></div>
-              </div>
-              <span>4.8/5</span>
-            </div>
-          </section> -->
-
           <section class="cta-review">
-            <a id="openReviewModal" class="review-button">Write a Review</a>
+            <a
+              id="openReviewModal"
+              class="review-button"
+              data-product-name="Grenache Noir"
+              >Write a Review</a
+            >
           </section>
         </section>
 
-        <!-- Pop-up Review Modal -->
         <div id="reviewModal" class="modal">
           <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <h2>Submit Your Review</h2>
 
-            <!-- Review Form -->
             <form id="reviewForm">
               <label id="ratingLabel" for="rating"
                 >Overall Rating<em>*</em></label
@@ -408,7 +364,20 @@
               />
 
               <label for="email">Your Email<em>*</em></label>
-              <input type="email" id="r.email" name="email" required />
+              <input
+                type="email"
+                id="r.email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+
+              <input
+                type="hidden"
+                id="productNameInput"
+                name="productName"
+                value="Premium Brut"
+              />
 
               <button type="submit" class="submitBtn">Submit Review</button>
             </form>
@@ -416,7 +385,7 @@
           </div>
         </div>
 
-        <section class="products" id="shop-card">
+        <section class="products">
           <h2>Related Products</h2>
           <div class="products">
             <div class="noir">
@@ -447,7 +416,7 @@
         </section>
       </section>
 
-      <!-- FAQ Section
+      <!-- FAQ maybe
       <section class="faq">
         <h2>FAQs</h2>
         <ul>
@@ -472,7 +441,6 @@
         </ul>
       </section> -->
 
-      <!-- Age Verification Modal -->
       <div id="age-check-modal" class="modal">
         <div class="modal-content">
           <img class="logo" src="images/icons/main_logo.webp" alt="Logo" />
@@ -508,111 +476,122 @@
     <script src="script.js"></script>
 
     <script>
-      const stars = document.querySelectorAll(".star");
-      const ratingValue = document.getElementById("rating-value");
-
-      // Handle star hover and click events
-      stars.forEach((star) => {
-        star.addEventListener("mouseover", () => {
-          resetStars();
-          highlightStars(star.getAttribute("data-value"));
-        });
-
-        // Show selected rating on click
-        star.addEventListener("click", () => {
-          ratingValue.innerText = `You rated this product ${star.getAttribute("data-value")} out of 5!
-          We'd love to hear your thoughts below.`;
-        });
-      });
-
-      // Function to reset all stars
-      function resetStars() {
-        stars.forEach((star) => (star.innerHTML = "&#9733;"));
-      }
-
-      // Function to highlight stars based on the rating
-      function highlightStars(rating) {
-        stars.forEach((star) => {
-          if (star.getAttribute("data-value") <= rating) {
-            star.style.color = "#bb9339";
-          } else {
-            star.style.color = "grey";
-          }
-        });
-      }
-
-      // Script for Review Modal and Form Handling
-
-      // Elements
+      const openReviewButtons = document.querySelectorAll(".review-button");
       const modal = document.getElementById("reviewModal");
-      const openModalBtn = document.getElementById("openReviewModal");
-      const closeModal = document.getElementById("closeModal");
-      const form = document.getElementById("reviewForm");
-      const starrate = document.querySelectorAll(".star");
-      let rating = 1;
 
-      // Open modal on button click
-      openModalBtn.addEventListener("click", () => {
-        modal.style.display = "flex";
+      openReviewButtons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const productTitle = btn.getAttribute("data-product-name");
+
+          productNameInput.value = productTitle;
+
+          modal.style.display = "flex";
+          console.log("Modal opened for:", productTitle);
+        });
       });
 
-      // Close modal on clicking the close button
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elements
+        const modal = document.getElementById("reviewModal");
+        const closeModal = document.getElementById("closeModal");
+        const form = document.getElementById("reviewForm");
+        const productNameInput = document.getElementById("productNameInput");
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwWxVKWf9u5Jl_BYe-ELxFDgU0l0no7vD_OuxJvrCvrRehqj1YWzfHagG1T-7MYYhcp/exec"; // <--- Update this
 
-      // Close modal on clicking outside the modal content
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
+        let selectedRating = 1;
 
-      // Star rating logic
-      starrate.forEach((star) => {
-        star.addEventListener("click", () => {
-          // Remove selected class from all stars
-          starrate.forEach((s) => s.classList.remove("selected"));
+        const pageStars = document.querySelectorAll(".customer-reviews .star");
+        const ratingValueText = document.getElementById("rating-value");
 
-          // Add selected class to clicked star and all previous stars
-          star.classList.add("selected");
-          for (let i = 0; i < star.dataset.value; i++) {
-            starrate[i].classList.add("selected");
-          }
+        pageStars.forEach((star) => {
+          star.addEventListener("mouseover", () => {
+            const val = star.getAttribute("data-value");
+            pageStars.forEach(
+              (s) =>
+                (s.style.color =
+                  s.getAttribute("data-value") <= val ? "#bb9339" : "grey"),
+            );
+          });
 
-          // Update rating
-          rating = star.dataset.value;
+          star.addEventListener("click", () => {
+            const val = star.getAttribute("data-value");
+            ratingValueText.innerText = `You rated this product ${val} out of 5!
+            We'd love to hear your thoughts below.`;
+            selectedRating = val;
+            updateModalStars(val);
+          });
+        });
+
+        const openModalBtn = document.getElementById("openReviewModal");
+        const modalStars = document.querySelectorAll("#reviewModal .star");
+
+        function updateModalStars(rating) {
+          modalStars.forEach((s) => {
+            s.style.color =
+              s.getAttribute("data-value") <= rating ? "#bb9339" : "grey";
+          });
           document.getElementById("ratingDisplay").textContent =
             `${rating} out of 5 stars selected.`;
-        });
-      });
-
-      // Handle form submission
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Form validation: check if all fields are filled
-        const reviewText = document.getElementById("reviewText").value;
-        const reviewTitle = document.getElementById("reviewTitle").value;
-        const email = document.getElementById("r.email").value;
-
-        if (!reviewText || !reviewTitle || !email) {
-          alert("Please fill out all required fields.");
-          return;
         }
 
-        // Send form data via email (using mailto for this example)
-        const subject = `New Review: ${reviewTitle}`;
-        const body = `Rating: ${rating}/5\nReview: ${reviewText}\nEmail: ${email}`;
-        const mailtoLink = `mailto:info@theafricandiamond.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        openModalBtn.addEventListener("click", (e) => {
+          const productTitle = e.target
+            .closest("section")
+            .parentElement.querySelector("h1, h2").innerText;
+          productNameInput.value = productTitle;
 
-        window.location.href = mailtoLink;
+          updateModalStars(selectedRating);
+          modal.style.display = "flex";
+        });
 
-        // Close modal after submission
-        modal.style.display = "none";
+        modalStars.forEach((star) => {
+          star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+            updateModalStars(selectedRating);
+          });
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const submitBtn = form.querySelector(".submitBtn");
+          const originalText = submitBtn.textContent;
+
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          const formData = new FormData(form);
+          formData.append("rating", selectedRating);
+
+          fetch(scriptURL, { method: "POST", body: formData })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert(
+                  `Thank you! Your review for ${productNameInput.value} has been sent.`,
+                );
+                form.reset();
+                modal.style.display = "none";
+              } else {
+                throw new Error();
+              }
+            })
+            .catch(() => alert("Oops! There was an error. Please try again."))
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            });
+        });
+
+        closeModal.onclick = () => (modal.style.display = "none");
+        window.onclick = (e) => {
+          if (e.target == modal) modal.style.display = "none";
+        };
       });
 
-      // Order Modal JavaScript
       const orderModal = document.getElementById("orderModal");
       const openOrderModal = document.getElementById("openOrderModal");
       const closeOrderModal = document.getElementById("closeOrderModal");
@@ -626,7 +605,6 @@
 
       const duoPrice = 370;
 
-      // Rates
       const localRate = 60;
       const domesticStandardRate = 80;
 
@@ -641,11 +619,9 @@
       const pfAmountInput = document.getElementById("pfAmount");
       const pfItemNameInput = document.getElementById("pfItemName");
 
-      // Function to calculate shipping fee based on address
       function calculateShippingFee() {
         const address = addressInput.value.toLowerCase();
 
-        // Apply local rate if Johannesburg is mentioned, otherwise default to domestic
         if (/johannesburg|jhb/i.test(address)) {
           return { fee: localRate, label: "Johannesburg Rate" };
         } else {
@@ -653,7 +629,6 @@
         }
       }
 
-      // Function to calculate total order amount
       function calculateTotal() {
         const noirBottleQty = parseInt(noirBottleQtyInput.value) || 0;
         const noirCaseQty = parseInt(noirCaseQtyInput.value) || 0;
@@ -673,23 +648,19 @@
           shipping.fee;
         totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
 
-        // Update PayFast form fields
-        pfAmountInput.value = totalAmount.toFixed(2); // PayFast amount
+        pfAmountInput.value = totalAmount.toFixed(2);
 
-        // Create an array of items with non-zero quantities
         const selectedItems = [
           noirBottleQty > 0 ? `${noirBottleQty} Noir Bottles` : null,
           noirCaseQty > 0 ? `${noirCaseQty} Noir Cases` : null,
           blancbottleQty > 0 ? `${blancbottleQty} Blanc Bottles` : null,
           blancCaseQty > 0 ? `${blancCaseQty} Blanc Cases` : null,
           duoQty > 0 ? `${duoQty} Duos` : null,
-        ].filter((item) => item !== null); // Filter out null items
+        ].filter((item) => item !== null);
 
-        // Join the selected items with commas and set it as the item name
         pfItemNameInput.value = selectedItems.join(", ");
       }
 
-      // Update total amount and shipping fee when address or quantities change
       [
         addressInput,
         noirBottleQtyInput,
@@ -704,15 +675,13 @@
       // Open order modal on button click
       openOrderModal.addEventListener("click", () => {
         orderModal.style.display = "flex";
-        calculateTotal(); // Recalculate total when modal opens
+        calculateTotal();
       });
 
-      // Close modal on clicking close button
       closeOrderModal.addEventListener("click", () => {
         orderModal.style.display = "none";
       });
 
-      // Close modal on clicking outside modal content
       window.onclick = function (event) {
         if (event.target == orderModal) {
           orderModal.style.display = "none";

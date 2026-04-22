@@ -1254,6 +1254,8 @@ section#blog div.press-container span.image {
 
   & img {
     width: 100%;
+    flex-shrink: 0;
+    min-height: 200px;
   }
 }
 
@@ -2113,6 +2115,41 @@ section.collection {
           background-image: url("images/assets/balnc_bottle.png");
         }
       }
+
+      & div#brut {
+        background-image: url("images/backgrounds/swartland_homebackground_long.webp");
+        background-position: right bottom;
+        background-size: auto 70%;
+        transition: all 0.4s ease;
+        border-radius: 0 0 5px 5px;
+
+        &:hover {
+          & span#image {
+            background-size: 103% auto;
+          }
+        }
+
+        & span#image {
+          background-image: url("images/assets/brut_bottle.png");
+        }
+      }
+
+      & div#rose {
+        background-image: url("images/backgrounds/skrew_homebackground.webp");
+        background-position: right top;
+        transition: all 0.4s ease;
+        border-radius: 0 0 5px 5px;
+
+        &:hover {
+          & span#image {
+            background-size: 103% auto;
+          }
+        }
+
+        & span#image {
+          background-image: url("images/assets/brut_rose_bottle.png");
+        }
+      }
     }
   }
 }
@@ -2398,6 +2435,38 @@ section.shop-landing span.balnc {
 
   & a {
     color: #bb9339;
+  }
+}
+
+section.shop-landing span.rose {
+  position: absolute;
+  top: 50%;
+  left: 4vw;
+  transform: translate(-4vh, -50%);
+  display: none;
+
+  & h1 {
+    color: #dcbbdd;
+  }
+
+  & a {
+    color: #dcbbdd;
+  }
+}
+
+section.shop-landing span.brut {
+  position: absolute;
+  top: 50%;
+  left: 4vw;
+  transform: translate(-4vh, -50%);
+  display: none;
+
+  & h1 {
+    color: #88aa7f;
+  }
+
+  & a {
+    color: #88aa7f;
   }
 }
 
@@ -3239,9 +3308,9 @@ form {
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #333433;
-      color: #bb9339;
-      border: #bb9339 solid 2px;
+      background-color: #33343300;
+      color: #333433;
+      border: #333433 solid 2px;
     }
 
     &:active {
@@ -3298,6 +3367,187 @@ main#shop-details section#shop-card {
     font-size: 1.2rem;
     font-family: "Arial Nova", Arial, sans-serif;
     font-weight: normal;
+  }
+}
+
+/* Review Styles */
+
+.review-button {
+  background-color: #bb9339;
+  border: #bb9339 1px solid;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #33343300;
+    border: #bb9339 1px solid;
+    color: #bb9339;
+  }
+
+  &:active {
+    background-color: #33343300;
+    border: #bb9339 1px solid;
+    color: #bb9339;
+  }
+}
+
+main#survey-page section#landing {
+  background-color: #dbdbdb;
+  background-image: url("images/backgrounds/contact_background.webp");
+  background-position: top left;
+  background-size: cover;
+  height: 70vh;
+  align-items: left;
+  text-align: left;
+  padding: 2rem;
+}
+
+main#survey-page h2 {
+  font-size: 2rem;
+  font-family: "Felix Titling V2";
+  font-weight: normal;
+  color: #333433;
+  padding: 20px;
+}
+
+.survey-landing p {
+  font-size: 1.2rem;
+  font-family: "Arial Nova", Arial, sans-serif;
+  width: 50vw;
+}
+
+.survey-container {
+  width: 70vw;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.survey-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.survey-container label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: "Felix Titling V2", sans-serif;
+  font-size: 1.4rem;
+}
+
+.survey-container input,
+.survey-container select,
+.survey-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  font-family: "Arial Nova", Arial, sans-serif;
+
+  &:focus {
+    outline: none;
+    border-color: #bb9339;
+  }
+}
+
+.survey-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#starContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  gap: 4px;
+  margin: 0;
+  padding: 0 0 12px 0;
+}
+
+.rating-inline {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.rating-inline .star {
+  color: grey;
+  transition: color 0.2s;
+}
+
+.rating-inline .star:hover {
+  color: #bb9339;
+}
+
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.custom-modal-content {
+  background-color: #fdfdfd;
+  padding: 3rem 2rem;
+  border: 1px solid #eaeaea;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+  border-radius: 4px;
+}
+
+.custom-modal-content h2 {
+  font-family: "Felix Titling V2", serif;
+  color: #111;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.custom-modal-content p {
+  color: #555;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.custom-modal-content .submitBtn {
+  width: auto;
+  padding: 12px 35px;
+  background-color: #bb9339;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.custom-modal-content .submitBtn:hover {
+  background-color: #333433;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -3977,6 +4227,19 @@ main#shop-details section#shop-card {
         max-width: 80%;
       }
     }
+  }
+
+  main#survey-page section#landing {
+    text-align: center;
+    justify-content: center;
+  }
+
+  main#survey-page section#landing p {
+    margin: 0 auto;
+  }
+
+  .survey-container {
+    width: 96vw;
   }
 }
 

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Feedback & Survey &mdash; The African Diamond</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/f1cfb0d208038e21ad90267089ab2584?family=Felix+Titling+V2"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/icons/head_icon.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main id="survey-page">
+      <header>
+        <ul>
+          <li class="homebutton">
+            <a href="/"
+              ><img id="logo" src="images/icons/main_logo.webp" alt="Full Logo"
+            /></a>
+          </li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="wine">WINES</a></li>
+          <li><a href="events">EVENTS</a></li>
+          <li><a href="contact">CONTACT</a></li>
+          <li><a href="shop">Shop</a></li>
+          <li><a href="press">Blog</a></li>
+        </ul>
+        <nav class="hamburger" id="hamburger">
+          <div>
+            <span id="home">
+              <a href="/"
+                ><img
+                  id="logo"
+                  src="images/icons/main_logo.webp"
+                  alt="Full Logo"
+              /></a>
+            </span>
+            <span><a href="about">ABOUT</a></span>
+            <span><a href="wine">WINES</a></span>
+            <span><a href="events">EVENTS</a></span>
+            <span><a href="contact">CONTACT</a></span>
+            <span><a href="shop">Shop</a></span>
+            <span><a href="press">Blog</a></span>
+          </div>
+        </nav>
+      </header>
+
+      <section class="survey-landing" id="landing">
+        <h1>Client Feedback</h1>
+        <p>
+          Thank you for choosing The African Diamond. We value your feedback to
+          help us continually elevate our Corporate Bar Services and event
+          experiences.
+        </p>
+      </section>
+
+      <h2>Customer Survey</h2>
+
+      <section class="survey-container">
+        <form id="surveyForm">
+          <div>
+            <label for="clientName">Company / Full Name</label>
+            <input
+              type="text"
+              id="clientName"
+              name="clientName"
+              placeholder="Enter your name or company"
+            />
+          </div>
+
+          <div>
+            <label for="email">Contact Email<em>*</em></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="reviewTitle">Review Title<em>*</em></label>
+            <input
+              type="text"
+              id="reviewTitle"
+              name="reviewTitle"
+              placeholder="E.g., Exceptional Corporate Event"
+              required
+            />
+          </div>
+
+          <div>
+            <label>Overall Experience<em>*</em></label>
+            <div class="rating-inline" id="starContainer">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="ratingDisplay" style="font-size: 0.9rem; color: #666">
+              Please select a rating.
+            </p>
+          </div>
+
+          <div>
+            <label for="serviceQuality">Beverage Quality & Selection</label>
+            <select id="serviceQuality" name="serviceQuality">
+              <option value="Excellent">Excellent</option>
+              <option value="Good">Good</option>
+              <option value="Average">Average</option>
+              <option value="Poor">Poor</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="staffRating">Staff Professionalism</label>
+            <select id="staffRating" name="staffRating">
+              <option value="Excellent">Excellent</option>
+              <option value="Good">Good</option>
+              <option value="Average">Average</option>
+              <option value="Poor">Poor</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="reviewText">Detailed Feedback<em>*</em></label>
+            <textarea
+              id="reviewText"
+              name="reviewText"
+              placeholder="Tell us about your experience..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submitBtn">Submit Feedback</button>
+          <p class="required" style="font-size: 0.85rem; color: #666">
+            <em>*</em> Required
+          </p>
+        </form>
+
+        <div id="notificationModal" class="custom-modal">
+          <div class="custom-modal-content">
+            <h2 id="notificationTitle">Thank You</h2>
+            <p id="notificationMessage">
+              Your feedback has been successfully submitted.
+            </p>
+            <button id="closeNotificationBtn" class="submitBtn">Close</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p><a href="privacy-policy">PRIVACY POLICY</a></p>
+        |
+        <p><a href="terms">TERMS & CONDITIONS</a></p>
+        |
+        <p>&copy; 2023 THE AFRICAN DIAMOND</p>
+      </footer>
+    </main>
+
+    <div class="cursor"></div>
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll("#starContainer .star");
+        const ratingDisplay = document.getElementById("ratingDisplay");
+        let currentRating = 0;
+
+        const notificationModal = document.getElementById("notificationModal");
+        const notificationTitle = document.getElementById("notificationTitle");
+        const notificationMessage = document.getElementById(
+          "notificationMessage",
+        );
+        const closeNotificationBtn = document.getElementById(
+          "closeNotificationBtn",
+        );
+
+        closeNotificationBtn.addEventListener("click", () => {
+          notificationModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+          if (event.target === notificationModal) {
+            notificationModal.style.display = "none";
+          }
+        });
+
+        function showNotification(title, message) {
+          notificationTitle.textContent = title;
+          notificationMessage.textContent = message;
+          notificationModal.style.display = "flex";
+        }
+
+        stars.forEach((star) => {
+          star.addEventListener("click", () => {
+            currentRating = parseInt(star.getAttribute("data-value"));
+
+            stars.forEach((s) => (s.style.color = "grey"));
+
+            for (let i = 0; i < currentRating; i++) {
+              stars[i].style.color = "#bb9339";
+            }
+
+            ratingDisplay.textContent = `${currentRating} out of 5 stars selected.`;
+          });
+        });
+
+        const form = document.getElementById("surveyForm");
+        const submitBtn = form.querySelector(".submitBtn");
+
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwWxVKWf9u5Jl_BYe-ELxFDgU0l0no7vD_OuxJvrCvrRehqj1YWzfHagG1T-7MYYhcp/exec";
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (currentRating === 0) {
+            showNotification(
+              "Rating Required",
+              "Please select a star rating before submitting.",
+            );
+            return;
+          }
+
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          const formData = new FormData(form);
+          formData.append("rating", currentRating);
+
+          fetch(scriptURL, { method: "POST", body: formData })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                showNotification(
+                  "Thank You",
+                  "Your feedback has been successfully submitted.",
+                );
+                form.reset();
+
+                currentRating = 0;
+                stars.forEach((s) => (s.style.color = "grey"));
+                ratingDisplay.textContent = "Please select a rating.";
+              } else {
+                throw new Error("Script returned an error.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error!", error.message);
+              showNotification(
+                "Submission Error",
+                "Oops! Something went wrong while submitting your review. Please try again.",
+              );
+            })
+            .finally(() => {
+              submitBtn.textContent = "Submit Feedback";
+              submitBtn.disabled = false;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

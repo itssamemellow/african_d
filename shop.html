@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,10 @@
       href="images/icons/head_icon.webp"
       type="image/x-icon"
     />
-    <meta name="google-site-verification" content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8" />
+    <meta
+      name="google-site-verification"
+      content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8"
+    />
   </head>
   <body>
     <main class="shop">
@@ -83,6 +86,28 @@
           <a href="shop-blanc">&mdash; View Details</a>
         </span>
 
+        <span class="rose">
+          <h3>Collection</h3>
+          <h1>Premium &mdash; Brut Rosé</h1>
+          <p>
+            Captivating expression of bright berry notes, beautifully
+            complemented by a smooth, creamy texture and a graceful dry finish
+            that lingers with sophistication.
+          </p>
+          <a href="shop-rose">&mdash; View Details</a>
+        </span>
+
+        <span class="brut">
+          <h3>Collection</h3>
+          <h1>Premium &mdash; Brut</h1>
+          <p>
+            Distinguished traditional blend of Chardonnay and Pinot, crafted to
+            deliver a refined balance of fresh fruit, a delicate creamy texture,
+            and an elegant, impeccably dry finish.
+          </p>
+          <a href="shop-brut">&mdash; View Details</a>
+        </span>
+
         <span class="shop-arrow">
           <h2>&rarr;</h2>
         </span>
@@ -93,8 +118,7 @@
           <img src="images/assets/brut_bottle.png" alt="Genache Noir" />
           <h3>Premium<br />Brut</h3>
           <span>
-            <a href="shop-brut">View Details</a
-            >
+            <a href="shop-brut">View Details</a>
           </span>
           <p>R 235.00</p>
         </div>
@@ -102,8 +126,7 @@
           <img src="images/assets/brut_rose_bottle.png" alt="Genache Blanc" />
           <h3>Premium<br />Brut Rosé</h3>
           <span>
-            <a href="shop-rose">View Details</a
-            >
+            <a href="shop-rose">View Details</a>
           </span>
           <p>R 255.00</p>
         </div>
@@ -111,8 +134,7 @@
           <img src="images/assets/noir_bottle.png" alt="Genache Noir" />
           <h3>Grenache<br />Noir</h3>
           <span>
-            <a href="shop-noir">View Details</a
-            >
+            <a href="shop-noir">View Details</a>
           </span>
           <p>R 235.00</p>
         </div>
@@ -120,8 +142,7 @@
           <img src="images/assets/balnc_bottle.png" alt="Genache Blanc" />
           <h3>Grenache<br />Blanc</h3>
           <span>
-            <a href="shop-blanc">View Details</a
-            >
+            <a href="shop-blanc">View Details</a>
           </span>
           <p>R 210.00</p>
         </div>
@@ -129,16 +150,18 @@
 
       <section class="shop-card" id="leather">
         <div class="leather">
-          <img src="images/assets/product/carrier-product-1.webp" alt="Genache Noir" />
+          <img
+            src="images/assets/product/carrier-product-1.webp"
+            alt="Genache Noir"
+          />
           <span>
             <h3>Wine Leather Carriers</h3>
             <p>
-              African Diamond Wines is proud to announce that due to popular 
-              demand, our custom Wine Leather carriers will be available to 
+              African Diamond Wines is proud to announce that due to popular
+              demand, our custom Wine Leather carriers will be available to
               purchase
             </p>
-            <a href="carriers">View Details</a
-            >
+            <a href="carriers">View Details</a>
           </span>
         </div>
       </section>
@@ -251,22 +274,25 @@
 
       <!-- Age Verification Modal -->
       <div id="age-check-modal" class="modal">
-          <div class="modal-content">
-              <img class="logo" src="images/icons/main_logo.webp" alt="Logo">
-              <h2>Age <span class="highlight">Verification</span></h2>
-              <p>Welcome to The African Diamond. </p>
-              <p>We encourage responsible enjoyment of our wines. </br>
-                By entering our site &mdash; you affirm that you are of legal drinking age.</p>
-              <div class="modal-buttons">
-                  <button id="yes-button" class="proceed-btn">Agree</button>
-                  <button id="no-button" class="exit-btn">Close</button>
-              </div>
-              <p class="legal-info">
-                  Entering the site you agree with our 
-                  <a href="terms">terms and conditions</a> and 
-                  <a href="privacy-policy">privacy policy</a>.
-              </p>
+        <div class="modal-content">
+          <img class="logo" src="images/icons/main_logo.webp" alt="Logo" />
+          <h2>Age <span class="highlight">Verification</span></h2>
+          <p>Welcome to The African Diamond.</p>
+          <p>
+            We encourage responsible enjoyment of our wines. <br />
+            By entering our site &mdash; you affirm that you are of legal
+            drinking age.
+          </p>
+          <div class="modal-buttons">
+            <button id="yes-button" class="proceed-btn">Agree</button>
+            <button id="no-button" class="exit-btn">Close</button>
           </div>
+          <p class="legal-info">
+            Entering the site you agree with our
+            <a href="terms">terms and conditions</a> and
+            <a href="privacy-policy">privacy policy</a>.
+          </p>
+        </div>
       </div>
 
       <footer>
@@ -287,14 +313,18 @@
 
       const noir = document.querySelector("section.shop-landing .noir");
       const blanc = document.querySelector("section.shop-landing .balnc");
+      const rose = document.querySelector("section.shop-landing .rose");
+      const brut = document.querySelector("section.shop-landing .brut");
       const landing = document.querySelector("section.shop-landing");
       const shopArrow = document.querySelector(
-        "section.shop-landing .shop-arrow h2"
+        "section.shop-landing .shop-arrow h2",
       );
 
       const backgrounds = [
         'url("images/backgrounds/shop_noir.webp")',
         'url("images/backgrounds/shop_blanc.webp")',
+        'url("images/backgrounds/shop_rose.webp")',
+        'url("images/backgrounds/shop_brut.webp")',
       ];
 
       let shopIndex = 0;
@@ -303,11 +333,27 @@
         if (shopIndex === 0) {
           noir.style.display = "flex";
           blanc.style.display = "none";
+          rose.style.display = "none";
+          brut.style.display = "none";
           shopArrow.style.color = "#f8b091";
-        } else {
+        } else if (shopIndex === 1) {
           noir.style.display = "none";
           blanc.style.display = "flex";
+          rose.style.display = "none";
+          brut.style.display = "none";
           shopArrow.style.color = "#bb9339";
+        } else if (shopIndex === 2) {
+          noir.style.display = "none";
+          blanc.style.display = "none";
+          rose.style.display = "flex";
+          brut.style.display = "none";
+          shopArrow.style.color = "#dcbbdd";
+        } else {
+          noir.style.display = "none";
+          blanc.style.display = "none";
+          rose.style.display = "none";
+          brut.style.display = "flex";
+          shopArrow.style.color = "#88aa7f";
         }
 
         landing.style.backgroundImage = backgrounds[shopIndex];
