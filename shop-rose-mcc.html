@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The African Diamond &mdash; Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/f1cfb0d208038e21ad90267089ab2584?family=Felix+Titling+V2"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/icons/head_icon.webp"
+      type="image/x-icon"
+    />
+    <meta
+      name="google-site-verification"
+      content="gaJhfU-b7RMKpjCsvkp4mjwCBjWKElh3Qhawc5E9ut8"
+    />
+  </head>
+  <body>
+    <main id="shop-details">
+      <header>
+        <ul>
+          <li class="homebutton">
+            <a href="/"
+              ><img id="logo" src="images/icons/main_logo.webp" alt="Full Logo"
+            /></a>
+          </li>
+          <li><a href="about">ABOUT</a></li>
+          <li><a href="wine">WINES</a></li>
+          <li><a href="events">EVENTS</a></li>
+          <li><a href="contact">CONTACT</a></li>
+          <li id="active"><a href="shop">Shop</a></li>
+          <li><a href="press">Blog</a></li>
+        </ul>
+        <nav class="hamburger" id="hamburger">
+          <div>
+            <span id="home">
+              <a href="/"
+                ><img
+                  id="logo"
+                  src="images/icons/main_logo.webp"
+                  alt="Full Logo" /></a
+            ></span>
+            <span>
+              <a href="about">ABOUT</a>
+            </span>
+            <span>
+              <a href="wine">WINES</a>
+            </span>
+            <span>
+              <a href="events">EVENTS</a>
+            </span>
+            <span>
+              <a href="contact">CONTACT</a>
+            </span>
+            <span>
+              <a href="shop">Shop</a>
+            </span>
+            <span>
+              <a href="press">Blog</a>
+            </span>
+          </div>
+        </nav>
+      </header>
+
+      <section class="brut-landing" id="landing">
+        <video
+          autoplay
+          loop
+          muted
+          src="images/videos/3698873762942492568.mp4"
+        ></video>
+      </section>
+
+      <section class="wine-shop" id="shop">
+        <section class="wine-card">
+          <h2>Succession Opulent Brut Rosé MCC</h2>
+          <span>
+            <div id="image">
+              <img
+                src="images/assets/CommingSoon.png"
+                alt="Succession Opulent Brut Rosé MCC"
+              />
+            </div>
+            <div class="wine-item">
+              <p>
+                <strong>Description:</strong> <br />The Succession Opulent Brut
+                Rosé MCC offers a captivating expression of rich berry notes,
+                beautifully complemented by a smooth, creamy texture and a
+                graceful dry semi-sweet finish that lingers with sophistication.
+                <br /><br />Created for those who appreciate
+                distinction, Succession by African Diamond embodies refinement,
+                prestige, and timeless luxury.
+              </p>
+              <ul class="wine-details">
+                <li>
+                  <strong>Exclusive Launch:</strong>
+                  <p>
+                    Reserve your bottles from the highly anticipated premium
+                    release. Secure your allocation early via our exclusive
+                    pre-order window.
+                  </p>
+                </li>
+              </ul>
+              <h3>Choose your MCC Legacy:</h3>
+              <ul class="price">
+                <li>
+                  <p>Opulent Brut Rosé MCC (Single Bottle):</p>
+                  <span></span><em>R 475.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>
+                    The MCC Heirloom Duo (10% savings):<small
+                      style="
+                        display: block;
+                        color: gray;
+                        font-size: 0.8rem;
+                        margin-top: 2px;
+                      "
+                      >1x Brut Nectar MCC, 1x Brut Rosé MCC</small
+                    >
+                  </p>
+                  <span></span><em>R 855.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>
+                    MCC Dynasty Collection:
+                    <small
+                      style="
+                        display: block;
+                        color: gray;
+                        font-size: 0.8rem;
+                        margin-top: 2px;
+                      "
+                      >4 bottles luxury design</small
+                    >
+                  </p>
+                  <span></span><em>R 1395.00</em>
+                </li>
+
+                <br />
+                <h4>Collectors Case MCC (6 Bottles)</h4>
+                <br />
+                <li>
+                  <p>Brut MCC Case:</p>
+                  <span></span><em>R 2850.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>Brut Rosé MCC Case:</p>
+                  <span></span><em>R 2850.00</em>
+                </li>
+                <br />
+                <li>
+                  <p>
+                    Mixed MCC Case:
+                    <small
+                      style="
+                        display: block;
+                        color: gray;
+                        font-size: 0.8rem;
+                        margin-top: 2px;
+                      "
+                      >3x Brut Nectar, 3x Brut Rosé</small
+                    >
+                  </p>
+                  <span></span><em>R 2850.00</em>
+                </li>
+              </ul>
+
+              <span id="btn">
+                <button id="openOrderModal" class="order-button">
+                  Pre-Order Now
+                </button>
+              </span>
+            </div>
+          </span>
+        </section>
+
+        <div id="orderModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeOrderModal">&times;</span>
+            <h2>Place Your Pre-Order</h2>
+
+            <form
+              id="orderForm"
+              action="https://www.payfast.co.za/eng/process"
+              method="POST"
+            >
+              <input type="hidden" name="merchant_id" value="25233413" />
+              <input type="hidden" name="merchant_key" value="4tvvj2efmay1d" />
+              <input type="hidden" name="amount" value="0.00" />
+              <input type="hidden" name="item_name" value="MCC Pre-Order" />
+              <input
+                type="hidden"
+                name="return_url"
+                value="https://theafricandiamond.co.za/payment-success"
+              />
+              <input
+                type="hidden"
+                name="cancel_url"
+                value="https://theafricandiamond.co.za/payment-cancelled.html"
+              />
+
+              <input type="hidden" id="pfAmount" name="amount" value="0.00" />
+              <input
+                type="hidden"
+                id="pfItemName"
+                name="item_name"
+                value="Pre-Order from The African Diamond"
+              />
+
+              <div>
+                <h4 class="brut">Succession MCC Singles & Collections</h4>
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="opulentBrutRoseQty"
+                    >Opulent Brut Rosé MCC Single (R475.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="opulentBrutRoseQty"
+                    name="opulentBrutRoseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="heirloomDuoQty"
+                    >The MCC Heirloom Duo (R855.00 each)</label
+                  >
+                  <input
+                    type="number"
+                    id="heirloomDuoQty"
+                    name="heirloomDuoQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="dynastyQty"
+                    >MCC Dynasty Collection - 4 Bottles (R1395.00)</label
+                  >
+                  <input
+                    type="number"
+                    id="dynastyQty"
+                    name="dynastyQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <h4 class="collections">Collectors Cases (6 Bottles)</h4>
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="nectarCaseQty">Brut MCC Case (R2850.00)</label>
+                  <input
+                    type="number"
+                    id="nectarCaseQty"
+                    name="nectarCaseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="roseCaseQty">Brut Rosé MCC Case (R2850.00)</label>
+                  <input
+                    type="number"
+                    id="roseCaseQty"
+                    name="roseCaseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+
+                <span class="quantity-wrapper" id="quantity">
+                  <label for="mixedCaseQty"
+                    >Mixed MCC Case - 3x Brut / 3x Rosé (R2850.00)</label
+                  >
+                  <input
+                    type="number"
+                    id="mixedCaseQty"
+                    name="mixedCaseQty"
+                    min="0"
+                    value="0"
+                  />
+                </span>
+              </div>
+
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+
+              <label for="address">Delivery Address</label>
+              <textarea
+                id="address"
+                name="address"
+                placeholder="Enter your delivery address..."
+                required
+              ></textarea>
+
+              <label for="email">Email</label>
+              <input
+                type="type"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+
+              <span class="payment-wrapper" id="payment">
+                <label for="shippingFee">Shipping Fee</label>
+                <p id="shippingFee">R0.00</p>
+              </span>
+
+              <span class="payment-wrapper total" id="payment">
+                <label for="totalAmount">Total Amount</label>
+                <p id="totalAmount">R0.00</p>
+              </span>
+
+              <button type="submit" class="submitBtn">Secure Pre-Order</button>
+            </form>
+          </div>
+        </div>
+
+        <section class="customer-reviews">
+          <section class="review-section">
+            <h3>Rate this product:</h3>
+            <div class="star-rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="rating-value">No rating yet</p>
+          </section>
+
+          <section class="cta-review">
+            <a
+              id="openReviewModal"
+              class="review-button"
+              data-product-name="Succession Opulent Brut Rosé MCC"
+              >Write a Review</a
+            >
+          </section>
+        </section>
+
+        <div id="reviewModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Submit Your Review</h2>
+
+            <form id="reviewForm">
+              <label id="ratingLabel" for="rating"
+                >Overall Rating<em>*</em></label
+              >
+              <div class="rating">
+                <span class="star" data-value="5">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="1">&#9733;</span>
+              </div>
+              <p id="ratingDisplay">
+                1 out of 5 stars selected. Product is poor.
+              </p>
+
+              <label for="reviewText">Review<em>*</em></label>
+              <textarea
+                id="reviewText"
+                name="reviewText"
+                placeholder="Write your review here..."
+                required
+              ></textarea>
+
+              <label for="reviewTitle">Review Title<em>*</em></label>
+              <input
+                type="text"
+                id="reviewTitle"
+                name="reviewTitle"
+                placeholder="Example: Exceptionally balanced finish"
+                required
+              />
+
+              <label for="email">Your Email<em>*</em></label>
+              <input
+                type="email"
+                id="r.email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+
+              <input
+                type="hidden"
+                id="productNameInput"
+                name="productName"
+                value="Succession Opulent Brut Rosé MCC"
+              />
+
+              <button type="submit" class="submitBtn">Submit Review</button>
+            </form>
+            <p class="required"><em>*</em> Required</p>
+          </div>
+        </div>
+
+        <section class="products">
+          <h2>Related Products</h2>
+          <div class="products">
+            <div class="noir">
+              <img
+                src="images/assets/brut_rose_bottle.png"
+                alt="Premium Brut Rose"
+              />
+              <h3>Premium<br />Brut Rosé</h3>
+              <span>
+                <a href="shop-rose">View Details</a>
+              </span>
+            </div>
+            <div class="balnc">
+              <img src="images/assets/balnc_bottle.png" alt="Grenache Blanc" />
+              <h3>Grenache<br />Blanc</h3>
+              <span>
+                <a href="shop-blanc">View Details</a>
+              </span>
+            </div>
+            <div class="noir">
+              <img src="images/assets/noir_bottle.png" alt="Grenache Noir" />
+              <h3>Grenache<br />Noir</h3>
+              <span>
+                <a href="shop-noir">View Details</a>
+              </span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <div id="age-check-modal" class="modal">
+        <div class="modal-content">
+          <img class="logo" src="images/icons/main_logo.webp" alt="Logo" />
+          <h2>Age <span class="highlight">Verification</span></h2>
+          <p>Welcome to The African Diamond.</p>
+          <p>
+            We encourage responsible enjoyment of our wines. <br />
+            By entering our site &mdash; you affirm that you are of legal
+            drinking age.
+          </p>
+          <div class="modal-buttons">
+            <button id="yes-button" class="proceed-btn">Agree</button>
+            <button id="no-button" class="exit-btn">Close</button>
+          </div>
+          <p class="legal-info">
+            Entering the site you agree with our
+            <a href="terms">terms and conditions</a> and
+            <a href="privacy-policy">privacy policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p><a href="privacy-policy">PRIVACY POLICY</a></p>
+        |
+        <p><a href="terms">TERMS & CONDITIONS</a></p>
+        |
+        <p>&copy; 2023 THE AFRICAN DIAMOND</p>
+      </footer>
+    </main>
+
+    <div class="cursor"></div>
+    <script src="script.js"></script>
+
+    <script>
+      const openReviewButtons = document.querySelectorAll(".review-button");
+      const modal = document.getElementById("reviewModal");
+      const productNameInput = document.getElementById("productNameInput");
+
+      openReviewButtons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const productTitle = btn.getAttribute("data-product-name");
+          productNameInput.value = productTitle;
+          modal.style.display = "flex";
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("reviewModal");
+        const closeModal = document.getElementById("closeModal");
+        const form = document.getElementById("reviewForm");
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwWxVKWf9u5Jl_BYe-ELxFDgU0l0no7vD_OuxJvrCvrRehqj1YWzfHagG1T-7MYYhcp/exec";
+
+        let selectedRating = 1;
+        const pageStars = document.querySelectorAll(".customer-reviews .star");
+        const ratingValueText = document.getElementById("rating-value");
+
+        pageStars.forEach((star) => {
+          star.addEventListener("mouseover", () => {
+            const val = star.getAttribute("data-value");
+            pageStars.forEach(
+              (s) =>
+                (s.style.color =
+                  s.getAttribute("data-value") <= val ? "#bb9339" : "grey"),
+            );
+          });
+
+          star.addEventListener("click", () => {
+            const val = star.getAttribute("data-value");
+            ratingValueText.innerText = `You rated this product ${val} out of 5! We'd love to hear your thoughts below.`;
+            selectedRating = val;
+            updateModalStars(val);
+          });
+        });
+
+        const openModalBtn = document.getElementById("openReviewModal");
+        const modalStars = document.querySelectorAll("#reviewModal .star");
+
+        function updateModalStars(rating) {
+          modalStars.forEach((s) => {
+            s.style.color =
+              s.getAttribute("data-value") <= rating ? "#bb9339" : "grey";
+          });
+          document.getElementById("ratingDisplay").textContent =
+            `${rating} out of 5 stars selected.`;
+        }
+
+        if (openModalBtn) {
+          openModalBtn.addEventListener("click", (e) => {
+            updateModalStars(selectedRating);
+            modal.style.display = "flex";
+          });
+        }
+
+        modalStars.forEach((star) => {
+          star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+            updateModalStars(selectedRating);
+          });
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const submitBtn = form.querySelector(".submitBtn");
+          const originalText = submitBtn.textContent;
+
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          const formData = new FormData(form);
+          formData.append("rating", selectedRating);
+
+          fetch(scriptURL, { method: "POST", body: formData })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert(
+                  `Thank you! Your review for ${productNameInput.value} has been sent.`,
+                );
+                form.reset();
+                modal.style.display = "none";
+              } else {
+                throw new Error();
+              }
+            })
+            .catch(() => alert("Oops! There was an error. Please try again."))
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            });
+        });
+
+        closeModal.onclick = () => (modal.style.display = "none");
+        window.onclick = (e) => {
+          if (e.target == modal) modal.style.display = "none";
+        };
+      });
+
+      // --- Pre-Order Calculator Logic ---
+      const orderModal = document.getElementById("orderModal");
+      const openOrderModal = document.getElementById("openOrderModal");
+      const closeOrderModal = document.getElementById("closeOrderModal");
+      const orderForm = document.getElementById("orderForm");
+
+      // New Pricing Constants
+      const opulentBrutRosePrice = 475;
+      const heirloomDuoPrice = 855;
+      const dynastyPrice = 1395;
+      const nectarCasePrice = 2850;
+      const roseCasePrice = 2850;
+      const mixedCasePrice = 2850;
+
+      const localRate = 60;
+      const domesticStandardRate = 80;
+
+      const opulentBrutRoseQtyInput =
+        document.getElementById("opulentBrutRoseQty");
+      const heirloomDuoQtyInput = document.getElementById("heirloomDuoQty");
+      const dynastyQtyInput = document.getElementById("dynastyQty");
+      const nectarCaseQtyInput = document.getElementById("nectarCaseQty");
+      const roseCaseQtyInput = document.getElementById("roseCaseQty");
+      const mixedCaseQtyInput = document.getElementById("mixedCaseQty");
+
+      const totalAmountElement = document.getElementById("totalAmount");
+      const shippingFeeElement = document.getElementById("shippingFee");
+      const addressInput = document.getElementById("address");
+      const pfAmountInput = document.getElementById("pfAmount");
+      const pfItemNameInput = document.getElementById("pfItemName");
+
+      function calculateShippingFee() {
+        const address = addressInput.value.toLowerCase();
+        if (/johannesburg|jhb/i.test(address)) {
+          return { fee: localRate, label: "Johannesburg Rate" };
+        } else {
+          return { fee: domesticStandardRate, label: "Domestic Rate" };
+        }
+      }
+
+      function calculateTotal() {
+        const opulentBrutRoseQty = parseInt(opulentBrutRoseQtyInput.value) || 0;
+        const heirloomDuoQty = parseInt(heirloomDuoQtyInput.value) || 0;
+        const dynastyQty = parseInt(dynastyQtyInput.value) || 0;
+        const nectarCaseQty = parseInt(nectarCaseQtyInput.value) || 0;
+        const roseCaseQty = parseInt(roseCaseQtyInput.value) || 0;
+        const mixedCaseQty = parseInt(mixedCaseQtyInput.value) || 0;
+
+        const shipping = calculateShippingFee();
+
+        // Don't calculate shipping fee if cart is empty
+        const totalItems =
+          opulentBrutRoseQty +
+          heirloomDuoQty +
+          dynastyQty +
+          nectarCaseQty +
+          roseCaseQty +
+          mixedCaseQty;
+        const activeShippingFee = totalItems > 0 ? shipping.fee : 0;
+
+        shippingFeeElement.textContent =
+          totalItems > 0
+            ? `R${activeShippingFee.toFixed(2)} (${shipping.label})`
+            : "R0.00";
+
+        const totalAmount =
+          opulentBrutRoseQty * opulentBrutRosePrice +
+          heirloomDuoQty * heirloomDuoPrice +
+          dynastyQty * dynastyPrice +
+          nectarCaseQty * nectarCasePrice +
+          roseCaseQty * roseCasePrice +
+          mixedCaseQty * mixedCasePrice +
+          activeShippingFee;
+
+        totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
+        pfAmountInput.value = totalAmount.toFixed(2);
+
+        const selectedItems = [
+          opulentBrutRoseQty > 0
+            ? `${opulentBrutRoseQty} Opulent Brut Rosé Singles`
+            : null,
+          heirloomDuoQty > 0 ? `${heirloomDuoQty} Heirloom Duos` : null,
+          dynastyQty > 0 ? `${dynastyQty} Dynasty Collections` : null,
+          nectarCaseQty > 0 ? `${nectarCaseQty} Nectar Cases` : null,
+          roseCaseQty > 0 ? `${roseCaseQty} Rosé Cases` : null,
+          mixedCaseQty > 0 ? `${mixedCaseQty} Mixed Cases` : null,
+        ].filter((item) => item !== null);
+
+        pfItemNameInput.value =
+          selectedItems.join(", ") || "Pre-Order from The African Diamond";
+      }
+
+      [
+        addressInput,
+        opulentBrutRoseQtyInput,
+        heirloomDuoQtyInput,
+        dynastyQtyInput,
+        nectarCaseQtyInput,
+        roseCaseQtyInput,
+        mixedCaseQtyInput,
+      ].forEach((input) => {
+        input.addEventListener("input", calculateTotal);
+      });
+
+      if (openOrderModal) {
+        openOrderModal.addEventListener("click", () => {
+          orderModal.style.display = "flex";
+          calculateTotal();
+        });
+      }
+
+      if (closeOrderModal) {
+        closeOrderModal.addEventListener("click", () => {
+          orderModal.style.display = "none";
+        });
+      }
+
+      window.onclick = function (event) {
+        if (event.target == orderModal) {
+          orderModal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
